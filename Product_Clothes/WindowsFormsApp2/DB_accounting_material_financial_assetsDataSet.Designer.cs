@@ -1037,10 +1037,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Employee_PositionsRow AddEmployee_PositionsRow(byte ID_Position_Employee, string Name_Position_Employee) {
+            public Employee_PositionsRow AddEmployee_PositionsRow(string Name_Position_Employee) {
                 Employee_PositionsRow rowEmployee_PositionsRow = ((Employee_PositionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_Position_Employee,
+                        null,
                         Name_Position_Employee};
                 rowEmployee_PositionsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEmployee_PositionsRow);
@@ -1049,7 +1049,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Employee_PositionsRow FindByID_Position_Employee(byte ID_Position_Employee) {
+            public Employee_PositionsRow FindByID_Position_Employee(int ID_Position_Employee) {
                 return ((Employee_PositionsRow)(this.Rows.Find(new object[] {
                             ID_Position_Employee})));
             }
@@ -1078,12 +1078,15 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_Position_Employee = new global::System.Data.DataColumn("ID_Position_Employee", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnID_Position_Employee = new global::System.Data.DataColumn("ID_Position_Employee", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Position_Employee);
                 this.columnName_Position_Employee = new global::System.Data.DataColumn("Name_Position_Employee", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName_Position_Employee);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Position_Employee}, true));
+                this.columnID_Position_Employee.AutoIncrement = true;
+                this.columnID_Position_Employee.AutoIncrementSeed = -1;
+                this.columnID_Position_Employee.AutoIncrementStep = -1;
                 this.columnID_Position_Employee.AllowDBNull = false;
                 this.columnID_Position_Employee.ReadOnly = true;
                 this.columnID_Position_Employee.Unique = true;
@@ -1351,10 +1354,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EmployeesRow AddEmployeesRow(byte ID_Employee, string Name_Employee, Employee_PositionsRow parentEmployee_PositionsRowByFK_Employees_Employee_Positions, double Salary_Employee, string Address_Employee, string PhoneNumber_Employee) {
+            public EmployeesRow AddEmployeesRow(string Name_Employee, Employee_PositionsRow parentEmployee_PositionsRowByFK_Employees_Employee_Positions, double Salary_Employee, string Address_Employee, string PhoneNumber_Employee) {
                 EmployeesRow rowEmployeesRow = ((EmployeesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_Employee,
+                        null,
                         Name_Employee,
                         null,
                         Salary_Employee,
@@ -1370,7 +1373,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EmployeesRow FindByID_Employee(byte ID_Employee) {
+            public EmployeesRow FindByID_Employee(int ID_Employee) {
                 return ((EmployeesRow)(this.Rows.Find(new object[] {
                             ID_Employee})));
             }
@@ -1403,11 +1406,11 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_Employee = new global::System.Data.DataColumn("ID_Employee", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnID_Employee = new global::System.Data.DataColumn("ID_Employee", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Employee);
                 this.columnName_Employee = new global::System.Data.DataColumn("Name_Employee", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName_Employee);
-                this.columnPosition_Employee = new global::System.Data.DataColumn("Position_Employee", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnPosition_Employee = new global::System.Data.DataColumn("Position_Employee", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPosition_Employee);
                 this.columnSalary_Employee = new global::System.Data.DataColumn("Salary_Employee", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSalary_Employee);
@@ -1417,6 +1420,9 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnPhoneNumber_Employee);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Employee}, true));
+                this.columnID_Employee.AutoIncrement = true;
+                this.columnID_Employee.AutoIncrementSeed = -1;
+                this.columnID_Employee.AutoIncrementStep = -1;
                 this.columnID_Employee.AllowDBNull = false;
                 this.columnID_Employee.ReadOnly = true;
                 this.columnID_Employee.Unique = true;
@@ -1676,10 +1682,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Finished_ProductsRow AddFinished_ProductsRow(byte ID_Finished_Product, string Name_Finished_Product, UnitOfMeasurementsRow parentUnitOfMeasurementsRowByFK_Finished_Products_UnitOfMeasurements, double Quantity_Finished_Product, double Amount_Finished_Product) {
+            public Finished_ProductsRow AddFinished_ProductsRow(string Name_Finished_Product, UnitOfMeasurementsRow parentUnitOfMeasurementsRowByFK_Finished_Products_UnitOfMeasurements, double Quantity_Finished_Product, double Amount_Finished_Product) {
                 Finished_ProductsRow rowFinished_ProductsRow = ((Finished_ProductsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_Finished_Product,
+                        null,
                         Name_Finished_Product,
                         null,
                         Quantity_Finished_Product,
@@ -1694,7 +1700,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Finished_ProductsRow FindByID_Finished_Product(byte ID_Finished_Product) {
+            public Finished_ProductsRow FindByID_Finished_Product(int ID_Finished_Product) {
                 return ((Finished_ProductsRow)(this.Rows.Find(new object[] {
                             ID_Finished_Product})));
             }
@@ -1726,11 +1732,11 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_Finished_Product = new global::System.Data.DataColumn("ID_Finished_Product", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnID_Finished_Product = new global::System.Data.DataColumn("ID_Finished_Product", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Finished_Product);
                 this.columnName_Finished_Product = new global::System.Data.DataColumn("Name_Finished_Product", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName_Finished_Product);
-                this.columnUnitOfMeasurement = new global::System.Data.DataColumn("UnitOfMeasurement", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnUnitOfMeasurement = new global::System.Data.DataColumn("UnitOfMeasurement", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUnitOfMeasurement);
                 this.columnQuantity_Finished_Product = new global::System.Data.DataColumn("Quantity_Finished_Product", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity_Finished_Product);
@@ -1738,6 +1744,9 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnAmount_Finished_Product);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Finished_Product}, true));
+                this.columnID_Finished_Product.AutoIncrement = true;
+                this.columnID_Finished_Product.AutoIncrementSeed = -1;
+                this.columnID_Finished_Product.AutoIncrementStep = -1;
                 this.columnID_Finished_Product.AllowDBNull = false;
                 this.columnID_Finished_Product.ReadOnly = true;
                 this.columnID_Finished_Product.Unique = true;
@@ -1985,10 +1994,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IngredientsRow AddIngredientsRow(byte ID_Ingredient, Finished_ProductsRow parentFinished_ProductsRowByFK_Ingredients_Finished_Products, Raw_materialsRow parentRaw_materialsRowByFK_Ingredients_Raw_materials, double Quantity_Ingredient) {
+            public IngredientsRow AddIngredientsRow(Finished_ProductsRow parentFinished_ProductsRowByFK_Ingredients_Finished_Products, Raw_materialsRow parentRaw_materialsRowByFK_Ingredients_Raw_materials, double Quantity_Ingredient) {
                 IngredientsRow rowIngredientsRow = ((IngredientsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_Ingredient,
+                        null,
                         null,
                         null,
                         Quantity_Ingredient};
@@ -2005,7 +2014,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IngredientsRow FindByID_Ingredient(byte ID_Ingredient) {
+            public IngredientsRow FindByID_Ingredient(int ID_Ingredient) {
                 return ((IngredientsRow)(this.Rows.Find(new object[] {
                             ID_Ingredient})));
             }
@@ -2036,16 +2045,19 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_Ingredient = new global::System.Data.DataColumn("ID_Ingredient", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnID_Ingredient = new global::System.Data.DataColumn("ID_Ingredient", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Ingredient);
-                this.columnFinished_Product = new global::System.Data.DataColumn("Finished_Product", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnFinished_Product = new global::System.Data.DataColumn("Finished_Product", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFinished_Product);
-                this.columnRaw_material = new global::System.Data.DataColumn("Raw_material", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnRaw_material = new global::System.Data.DataColumn("Raw_material", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRaw_material);
                 this.columnQuantity_Ingredient = new global::System.Data.DataColumn("Quantity_Ingredient", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity_Ingredient);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Ingredient}, true));
+                this.columnID_Ingredient.AutoIncrement = true;
+                this.columnID_Ingredient.AutoIncrementSeed = -1;
+                this.columnID_Ingredient.AutoIncrementStep = -1;
                 this.columnID_Ingredient.AllowDBNull = false;
                 this.columnID_Ingredient.ReadOnly = true;
                 this.columnID_Ingredient.Unique = true;
@@ -2302,10 +2314,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Product_ManufacturingsRow AddProduct_ManufacturingsRow(byte ID_Product_Manufacturing, Finished_ProductsRow parentFinished_ProductsRowByFK_Product_Manufacturings_Finished_Products, double Quantity_Product_Manufacturing, System.DateTime Date, EmployeesRow parentEmployeesRowByFK_Product_Manufacturings_Employees) {
+            public Product_ManufacturingsRow AddProduct_ManufacturingsRow(Finished_ProductsRow parentFinished_ProductsRowByFK_Product_Manufacturings_Finished_Products, double Quantity_Product_Manufacturing, System.DateTime Date, EmployeesRow parentEmployeesRowByFK_Product_Manufacturings_Employees) {
                 Product_ManufacturingsRow rowProduct_ManufacturingsRow = ((Product_ManufacturingsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_Product_Manufacturing,
+                        null,
                         null,
                         Quantity_Product_Manufacturing,
                         Date,
@@ -2323,7 +2335,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Product_ManufacturingsRow FindByID_Product_Manufacturing(byte ID_Product_Manufacturing) {
+            public Product_ManufacturingsRow FindByID_Product_Manufacturing(int ID_Product_Manufacturing) {
                 return ((Product_ManufacturingsRow)(this.Rows.Find(new object[] {
                             ID_Product_Manufacturing})));
             }
@@ -2355,18 +2367,21 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_Product_Manufacturing = new global::System.Data.DataColumn("ID_Product_Manufacturing", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnID_Product_Manufacturing = new global::System.Data.DataColumn("ID_Product_Manufacturing", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Product_Manufacturing);
-                this.columnProduct_Manufacturing = new global::System.Data.DataColumn("Product_Manufacturing", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnProduct_Manufacturing = new global::System.Data.DataColumn("Product_Manufacturing", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProduct_Manufacturing);
                 this.columnQuantity_Product_Manufacturing = new global::System.Data.DataColumn("Quantity_Product_Manufacturing", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity_Product_Manufacturing);
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
-                this.columnEmployee = new global::System.Data.DataColumn("Employee", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnEmployee = new global::System.Data.DataColumn("Employee", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployee);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Product_Manufacturing}, true));
+                this.columnID_Product_Manufacturing.AutoIncrement = true;
+                this.columnID_Product_Manufacturing.AutoIncrementSeed = -1;
+                this.columnID_Product_Manufacturing.AutoIncrementStep = -1;
                 this.columnID_Product_Manufacturing.AllowDBNull = false;
                 this.columnID_Product_Manufacturing.ReadOnly = true;
                 this.columnID_Product_Manufacturing.Unique = true;
@@ -2633,10 +2648,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Purchase_Raw_MaterialsRow AddPurchase_Raw_MaterialsRow(byte ID_Purchase_Raw_Material, Raw_materialsRow parentRaw_materialsRowByFK_Purchase_Raw_Materials_Raw_materials, double Quantity_Purchase_Raw_Material, double Amount__Purchase_Raw_Material, System.DateTime Date, EmployeesRow parentEmployeesRowByFK_Purchase_Raw_Materials_Employees) {
+            public Purchase_Raw_MaterialsRow AddPurchase_Raw_MaterialsRow(Raw_materialsRow parentRaw_materialsRowByFK_Purchase_Raw_Materials_Raw_materials, double Quantity_Purchase_Raw_Material, double Amount__Purchase_Raw_Material, System.DateTime Date, EmployeesRow parentEmployeesRowByFK_Purchase_Raw_Materials_Employees) {
                 Purchase_Raw_MaterialsRow rowPurchase_Raw_MaterialsRow = ((Purchase_Raw_MaterialsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_Purchase_Raw_Material,
+                        null,
                         null,
                         Quantity_Purchase_Raw_Material,
                         Amount__Purchase_Raw_Material,
@@ -2655,7 +2670,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Purchase_Raw_MaterialsRow FindByID_Purchase_Raw_Material(byte ID_Purchase_Raw_Material) {
+            public Purchase_Raw_MaterialsRow FindByID_Purchase_Raw_Material(int ID_Purchase_Raw_Material) {
                 return ((Purchase_Raw_MaterialsRow)(this.Rows.Find(new object[] {
                             ID_Purchase_Raw_Material})));
             }
@@ -2688,9 +2703,9 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_Purchase_Raw_Material = new global::System.Data.DataColumn("ID_Purchase_Raw_Material", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnID_Purchase_Raw_Material = new global::System.Data.DataColumn("ID_Purchase_Raw_Material", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Purchase_Raw_Material);
-                this.columnRaw_Material = new global::System.Data.DataColumn("Raw_Material", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnRaw_Material = new global::System.Data.DataColumn("Raw_Material", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRaw_Material);
                 this.columnQuantity_Purchase_Raw_Material = new global::System.Data.DataColumn("Quantity_Purchase_Raw_Material", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity_Purchase_Raw_Material);
@@ -2698,10 +2713,13 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnAmount__Purchase_Raw_Material);
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
-                this.columnEmployee = new global::System.Data.DataColumn("Employee", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnEmployee = new global::System.Data.DataColumn("Employee", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployee);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Purchase_Raw_Material}, true));
+                this.columnID_Purchase_Raw_Material.AutoIncrement = true;
+                this.columnID_Purchase_Raw_Material.AutoIncrementSeed = -1;
+                this.columnID_Purchase_Raw_Material.AutoIncrementStep = -1;
                 this.columnID_Purchase_Raw_Material.AllowDBNull = false;
                 this.columnID_Purchase_Raw_Material.ReadOnly = true;
                 this.columnID_Purchase_Raw_Material.Unique = true;
@@ -2958,10 +2976,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Raw_materialsRow AddRaw_materialsRow(byte ID_Raw_material, string Name_Raw_material, UnitOfMeasurementsRow parentUnitOfMeasurementsRowByFK_Raw_materials_UnitOfMeasurements, double Quantity_Raw_material, double Amount_Raw_material) {
+            public Raw_materialsRow AddRaw_materialsRow(string Name_Raw_material, UnitOfMeasurementsRow parentUnitOfMeasurementsRowByFK_Raw_materials_UnitOfMeasurements, double Quantity_Raw_material, double Amount_Raw_material) {
                 Raw_materialsRow rowRaw_materialsRow = ((Raw_materialsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_Raw_material,
+                        null,
                         Name_Raw_material,
                         null,
                         Quantity_Raw_material,
@@ -2976,7 +2994,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Raw_materialsRow FindByID_Raw_material(byte ID_Raw_material) {
+            public Raw_materialsRow FindByID_Raw_material(int ID_Raw_material) {
                 return ((Raw_materialsRow)(this.Rows.Find(new object[] {
                             ID_Raw_material})));
             }
@@ -3008,11 +3026,11 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_Raw_material = new global::System.Data.DataColumn("ID_Raw_material", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnID_Raw_material = new global::System.Data.DataColumn("ID_Raw_material", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Raw_material);
                 this.columnName_Raw_material = new global::System.Data.DataColumn("Name_Raw_material", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName_Raw_material);
-                this.columnUnitOfMeasurement = new global::System.Data.DataColumn("UnitOfMeasurement", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnUnitOfMeasurement = new global::System.Data.DataColumn("UnitOfMeasurement", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUnitOfMeasurement);
                 this.columnQuantity_Raw_material = new global::System.Data.DataColumn("Quantity_Raw_material", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity_Raw_material);
@@ -3020,6 +3038,9 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnAmount_Raw_material);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Raw_material}, true));
+                this.columnID_Raw_material.AutoIncrement = true;
+                this.columnID_Raw_material.AutoIncrementSeed = -1;
+                this.columnID_Raw_material.AutoIncrementStep = -1;
                 this.columnID_Raw_material.AllowDBNull = false;
                 this.columnID_Raw_material.ReadOnly = true;
                 this.columnID_Raw_material.Unique = true;
@@ -3287,10 +3308,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Sales_of_productsRow AddSales_of_productsRow(byte ID_Sales_of_product, Finished_ProductsRow parentFinished_ProductsRowByFK_Sales_of_products_Finished_Products, double Quantity_Sales_of_product, double Amount_Sales_of_product, System.DateTime Date, EmployeesRow parentEmployeesRowByFK_Sales_of_products_Employees) {
+            public Sales_of_productsRow AddSales_of_productsRow(Finished_ProductsRow parentFinished_ProductsRowByFK_Sales_of_products_Finished_Products, double Quantity_Sales_of_product, double Amount_Sales_of_product, System.DateTime Date, EmployeesRow parentEmployeesRowByFK_Sales_of_products_Employees) {
                 Sales_of_productsRow rowSales_of_productsRow = ((Sales_of_productsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_Sales_of_product,
+                        null,
                         null,
                         Quantity_Sales_of_product,
                         Amount_Sales_of_product,
@@ -3309,7 +3330,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Sales_of_productsRow FindByID_Sales_of_product(byte ID_Sales_of_product) {
+            public Sales_of_productsRow FindByID_Sales_of_product(int ID_Sales_of_product) {
                 return ((Sales_of_productsRow)(this.Rows.Find(new object[] {
                             ID_Sales_of_product})));
             }
@@ -3342,9 +3363,9 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_Sales_of_product = new global::System.Data.DataColumn("ID_Sales_of_product", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnID_Sales_of_product = new global::System.Data.DataColumn("ID_Sales_of_product", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Sales_of_product);
-                this.columnProduct_Sales_of_product = new global::System.Data.DataColumn("Product_Sales_of_product", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnProduct_Sales_of_product = new global::System.Data.DataColumn("Product_Sales_of_product", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProduct_Sales_of_product);
                 this.columnQuantity_Sales_of_product = new global::System.Data.DataColumn("Quantity_Sales_of_product", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity_Sales_of_product);
@@ -3352,10 +3373,13 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnAmount_Sales_of_product);
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
-                this.columnEmployee = new global::System.Data.DataColumn("Employee", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnEmployee = new global::System.Data.DataColumn("Employee", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmployee);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Sales_of_product}, true));
+                this.columnID_Sales_of_product.AutoIncrement = true;
+                this.columnID_Sales_of_product.AutoIncrementSeed = -1;
+                this.columnID_Sales_of_product.AutoIncrementStep = -1;
                 this.columnID_Sales_of_product.AllowDBNull = false;
                 this.columnID_Sales_of_product.ReadOnly = true;
                 this.columnID_Sales_of_product.Unique = true;
@@ -3582,10 +3606,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UnitOfMeasurementsRow AddUnitOfMeasurementsRow(byte ID_UnitOfMeasurement, string Name_UnitOfMeasurement) {
+            public UnitOfMeasurementsRow AddUnitOfMeasurementsRow(string Name_UnitOfMeasurement) {
                 UnitOfMeasurementsRow rowUnitOfMeasurementsRow = ((UnitOfMeasurementsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_UnitOfMeasurement,
+                        null,
                         Name_UnitOfMeasurement};
                 rowUnitOfMeasurementsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUnitOfMeasurementsRow);
@@ -3594,7 +3618,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UnitOfMeasurementsRow FindByID_UnitOfMeasurement(byte ID_UnitOfMeasurement) {
+            public UnitOfMeasurementsRow FindByID_UnitOfMeasurement(int ID_UnitOfMeasurement) {
                 return ((UnitOfMeasurementsRow)(this.Rows.Find(new object[] {
                             ID_UnitOfMeasurement})));
             }
@@ -3623,12 +3647,15 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_UnitOfMeasurement = new global::System.Data.DataColumn("ID_UnitOfMeasurement", typeof(byte), null, global::System.Data.MappingType.Element);
+                this.columnID_UnitOfMeasurement = new global::System.Data.DataColumn("ID_UnitOfMeasurement", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_UnitOfMeasurement);
                 this.columnName_UnitOfMeasurement = new global::System.Data.DataColumn("Name_UnitOfMeasurement", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName_UnitOfMeasurement);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_UnitOfMeasurement}, true));
+                this.columnID_UnitOfMeasurement.AutoIncrement = true;
+                this.columnID_UnitOfMeasurement.AutoIncrementSeed = -1;
+                this.columnID_UnitOfMeasurement.AutoIncrementStep = -1;
                 this.columnID_UnitOfMeasurement.AllowDBNull = false;
                 this.columnID_UnitOfMeasurement.ReadOnly = true;
                 this.columnID_UnitOfMeasurement.Unique = true;
@@ -3829,9 +3856,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte ID_Position_Employee {
+            public int ID_Position_Employee {
                 get {
-                    return ((byte)(this[this.tableEmployee_Positions.ID_Position_EmployeeColumn]));
+                    return ((int)(this[this.tableEmployee_Positions.ID_Position_EmployeeColumn]));
                 }
                 set {
                     this[this.tableEmployee_Positions.ID_Position_EmployeeColumn] = value;
@@ -3895,9 +3922,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte ID_Employee {
+            public int ID_Employee {
                 get {
-                    return ((byte)(this[this.tableEmployees.ID_EmployeeColumn]));
+                    return ((int)(this[this.tableEmployees.ID_EmployeeColumn]));
                 }
                 set {
                     this[this.tableEmployees.ID_EmployeeColumn] = value;
@@ -3922,10 +3949,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Position_Employee {
+            public int Position_Employee {
                 get {
                     try {
-                        return ((byte)(this[this.tableEmployees.Position_EmployeeColumn]));
+                        return ((int)(this[this.tableEmployees.Position_EmployeeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Position_Employee\' в таблице \'Employees\' равно DBNull.", e);
@@ -4105,9 +4132,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte ID_Finished_Product {
+            public int ID_Finished_Product {
                 get {
-                    return ((byte)(this[this.tableFinished_Products.ID_Finished_ProductColumn]));
+                    return ((int)(this[this.tableFinished_Products.ID_Finished_ProductColumn]));
                 }
                 set {
                     this[this.tableFinished_Products.ID_Finished_ProductColumn] = value;
@@ -4133,10 +4160,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte UnitOfMeasurement {
+            public int UnitOfMeasurement {
                 get {
                     try {
-                        return ((byte)(this[this.tableFinished_Products.UnitOfMeasurementColumn]));
+                        return ((int)(this[this.tableFinished_Products.UnitOfMeasurementColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'UnitOfMeasurement\' в таблице \'Finished_Products\' равно DBNu" +
@@ -4291,9 +4318,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte ID_Ingredient {
+            public int ID_Ingredient {
                 get {
-                    return ((byte)(this[this.tableIngredients.ID_IngredientColumn]));
+                    return ((int)(this[this.tableIngredients.ID_IngredientColumn]));
                 }
                 set {
                     this[this.tableIngredients.ID_IngredientColumn] = value;
@@ -4302,10 +4329,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Finished_Product {
+            public int Finished_Product {
                 get {
                     try {
-                        return ((byte)(this[this.tableIngredients.Finished_ProductColumn]));
+                        return ((int)(this[this.tableIngredients.Finished_ProductColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Finished_Product\' в таблице \'Ingredients\' равно DBNull.", e);
@@ -4318,10 +4345,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Raw_material {
+            public int Raw_material {
                 get {
                     try {
-                        return ((byte)(this[this.tableIngredients.Raw_materialColumn]));
+                        return ((int)(this[this.tableIngredients.Raw_materialColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Raw_material\' в таблице \'Ingredients\' равно DBNull.", e);
@@ -4423,9 +4450,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte ID_Product_Manufacturing {
+            public int ID_Product_Manufacturing {
                 get {
-                    return ((byte)(this[this.tableProduct_Manufacturings.ID_Product_ManufacturingColumn]));
+                    return ((int)(this[this.tableProduct_Manufacturings.ID_Product_ManufacturingColumn]));
                 }
                 set {
                     this[this.tableProduct_Manufacturings.ID_Product_ManufacturingColumn] = value;
@@ -4434,10 +4461,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Product_Manufacturing {
+            public int Product_Manufacturing {
                 get {
                     try {
-                        return ((byte)(this[this.tableProduct_Manufacturings.Product_ManufacturingColumn]));
+                        return ((int)(this[this.tableProduct_Manufacturings.Product_ManufacturingColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Product_Manufacturing\' в таблице \'Product_Manufacturings\' р" +
@@ -4484,10 +4511,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Employee {
+            public int Employee {
                 get {
                     try {
-                        return ((byte)(this[this.tableProduct_Manufacturings.EmployeeColumn]));
+                        return ((int)(this[this.tableProduct_Manufacturings.EmployeeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Employee\' в таблице \'Product_Manufacturings\' равно DBNull.", e);
@@ -4585,9 +4612,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte ID_Purchase_Raw_Material {
+            public int ID_Purchase_Raw_Material {
                 get {
-                    return ((byte)(this[this.tablePurchase_Raw_Materials.ID_Purchase_Raw_MaterialColumn]));
+                    return ((int)(this[this.tablePurchase_Raw_Materials.ID_Purchase_Raw_MaterialColumn]));
                 }
                 set {
                     this[this.tablePurchase_Raw_Materials.ID_Purchase_Raw_MaterialColumn] = value;
@@ -4596,10 +4623,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Raw_Material {
+            public int Raw_Material {
                 get {
                     try {
-                        return ((byte)(this[this.tablePurchase_Raw_Materials.Raw_MaterialColumn]));
+                        return ((int)(this[this.tablePurchase_Raw_Materials.Raw_MaterialColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Raw_Material\' в таблице \'Purchase_Raw_Materials\' равно DBNu" +
@@ -4663,10 +4690,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Employee {
+            public int Employee {
                 get {
                     try {
-                        return ((byte)(this[this.tablePurchase_Raw_Materials.EmployeeColumn]));
+                        return ((int)(this[this.tablePurchase_Raw_Materials.EmployeeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Employee\' в таблице \'Purchase_Raw_Materials\' равно DBNull.", e);
@@ -4776,9 +4803,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte ID_Raw_material {
+            public int ID_Raw_material {
                 get {
-                    return ((byte)(this[this.tableRaw_materials.ID_Raw_materialColumn]));
+                    return ((int)(this[this.tableRaw_materials.ID_Raw_materialColumn]));
                 }
                 set {
                     this[this.tableRaw_materials.ID_Raw_materialColumn] = value;
@@ -4803,10 +4830,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte UnitOfMeasurement {
+            public int UnitOfMeasurement {
                 get {
                     try {
-                        return ((byte)(this[this.tableRaw_materials.UnitOfMeasurementColumn]));
+                        return ((int)(this[this.tableRaw_materials.UnitOfMeasurementColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'UnitOfMeasurement\' в таблице \'Raw_materials\' равно DBNull.", e);
@@ -4949,9 +4976,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte ID_Sales_of_product {
+            public int ID_Sales_of_product {
                 get {
-                    return ((byte)(this[this.tableSales_of_products.ID_Sales_of_productColumn]));
+                    return ((int)(this[this.tableSales_of_products.ID_Sales_of_productColumn]));
                 }
                 set {
                     this[this.tableSales_of_products.ID_Sales_of_productColumn] = value;
@@ -4960,10 +4987,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Product_Sales_of_product {
+            public int Product_Sales_of_product {
                 get {
                     try {
-                        return ((byte)(this[this.tableSales_of_products.Product_Sales_of_productColumn]));
+                        return ((int)(this[this.tableSales_of_products.Product_Sales_of_productColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Product_Sales_of_product\' в таблице \'Sales_of_products\' рав" +
@@ -5027,10 +5054,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte Employee {
+            public int Employee {
                 get {
                     try {
-                        return ((byte)(this[this.tableSales_of_products.EmployeeColumn]));
+                        return ((int)(this[this.tableSales_of_products.EmployeeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Employee\' в таблице \'Sales_of_products\' равно DBNull.", e);
@@ -5140,9 +5167,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public byte ID_UnitOfMeasurement {
+            public int ID_UnitOfMeasurement {
                 get {
-                    return ((byte)(this[this.tableUnitOfMeasurements.ID_UnitOfMeasurementColumn]));
+                    return ((int)(this[this.tableUnitOfMeasurements.ID_UnitOfMeasurementColumn]));
                 }
                 set {
                     this[this.tableUnitOfMeasurements.ID_UnitOfMeasurementColumn] = value;
@@ -6000,7 +6027,7 @@ SELECT ID_Budget, Budget_Amount FROM Budget WHERE (ID_Budget = @ID_Budget)";
                 "on_Employee] IS NULL) OR ([Name_Position_Employee] = @Original_Name_Position_Emp" +
                 "loyee)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Position_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Position_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Position_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -6016,10 +6043,10 @@ SELECT ID_Budget, Budget_Amount FROM Budget WHERE (ID_Budget = @ID_Budget)";
 SELECT ID_Position_Employee, Name_Position_Employee FROM Employee_Positions WHERE (ID_Position_Employee = @ID_Position_Employee)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Position_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Position_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Position_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Position_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Position_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Position_Employee", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Position_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Position_Employee", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Position_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6096,8 +6123,8 @@ SELECT ID_Position_Employee, Name_Position_Employee FROM Employee_Positions WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(byte Original_ID_Position_Employee, string Original_Name_Position_Employee) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(Original_ID_Position_Employee));
+        public virtual int Delete(int Original_ID_Position_Employee, string Original_Name_Position_Employee) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Position_Employee));
             if ((Original_Name_Position_Employee == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -6153,14 +6180,14 @@ SELECT ID_Position_Employee, Name_Position_Employee FROM Employee_Positions WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_Position_Employee, byte Original_ID_Position_Employee, string Original_Name_Position_Employee, byte ID_Position_Employee) {
+        public virtual int Update(string Name_Position_Employee, int Original_ID_Position_Employee, string Original_Name_Position_Employee, int ID_Position_Employee) {
             if ((Name_Position_Employee == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name_Position_Employee));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((byte)(Original_ID_Position_Employee));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ID_Position_Employee));
             if ((Original_Name_Position_Employee == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -6169,7 +6196,7 @@ SELECT ID_Position_Employee, Name_Position_Employee FROM Employee_Positions WHER
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Name_Position_Employee));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(ID_Position_Employee));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ID_Position_Employee));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6190,7 +6217,7 @@ SELECT ID_Position_Employee, Name_Position_Employee FROM Employee_Positions WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_Position_Employee, byte Original_ID_Position_Employee, string Original_Name_Position_Employee) {
+        public virtual int Update(string Name_Position_Employee, int Original_ID_Position_Employee, string Original_Name_Position_Employee) {
             return this.Update(Name_Position_Employee, Original_ID_Position_Employee, Original_Name_Position_Employee, Original_ID_Position_Employee);
         }
     }
@@ -6327,11 +6354,11 @@ SELECT ID_Position_Employee, Name_Position_Employee FROM Employee_Positions WHER
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Employees] WHERE (([ID_Employee] = @Original_ID_Employee) AND ((@IsNull_Name_Employee = 1 AND [Name_Employee] IS NULL) OR ([Name_Employee] = @Original_Name_Employee)) AND ((@IsNull_Position_Employee = 1 AND [Position_Employee] IS NULL) OR ([Position_Employee] = @Original_Position_Employee)) AND ((@IsNull_Salary_Employee = 1 AND [Salary_Employee] IS NULL) OR ([Salary_Employee] = @Original_Salary_Employee)) AND ((@IsNull_Address_Employee = 1 AND [Address_Employee] IS NULL) OR ([Address_Employee] = @Original_Address_Employee)) AND ((@IsNull_PhoneNumber_Employee = 1 AND [PhoneNumber_Employee] IS NULL) OR ([PhoneNumber_Employee] = @Original_PhoneNumber_Employee)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Position_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Salary_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Salary_Employee", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Address_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -6344,7 +6371,7 @@ SELECT ID_Position_Employee, Name_Position_Employee FROM Employee_Positions WHER
 SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_Employee, PhoneNumber_Employee FROM Employees WHERE (ID_Employee = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Position_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Salary_Employee", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6354,22 +6381,22 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
 SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_Employee, PhoneNumber_Employee FROM Employees WHERE (ID_Employee = @ID_Employee)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Position_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Salary_Employee", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Position_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Position_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Salary_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Salary_Employee", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Salary_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Address_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Address_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PhoneNumber_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber_Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNumber_Employee", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Employee", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Employee", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6447,8 +6474,8 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(byte Original_ID_Employee, string Original_Name_Employee, global::System.Nullable<byte> Original_Position_Employee, global::System.Nullable<double> Original_Salary_Employee, string Original_Address_Employee, string Original_PhoneNumber_Employee) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(Original_ID_Employee));
+        public virtual int Delete(int Original_ID_Employee, string Original_Name_Employee, global::System.Nullable<int> Original_Position_Employee, global::System.Nullable<double> Original_Salary_Employee, string Original_Address_Employee, string Original_PhoneNumber_Employee) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Employee));
             if ((Original_Name_Employee == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -6459,7 +6486,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
             }
             if ((Original_Position_Employee.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((byte)(Original_Position_Employee.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Position_Employee.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -6509,7 +6536,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Name_Employee, global::System.Nullable<byte> Position_Employee, global::System.Nullable<double> Salary_Employee, string Address_Employee, string PhoneNumber_Employee) {
+        public virtual int Insert(string Name_Employee, global::System.Nullable<int> Position_Employee, global::System.Nullable<double> Salary_Employee, string Address_Employee, string PhoneNumber_Employee) {
             if ((Name_Employee == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6517,7 +6544,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name_Employee));
             }
             if ((Position_Employee.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((byte)(Position_Employee.Value));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Position_Employee.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -6560,7 +6587,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_Employee, global::System.Nullable<byte> Position_Employee, global::System.Nullable<double> Salary_Employee, string Address_Employee, string PhoneNumber_Employee, byte Original_ID_Employee, string Original_Name_Employee, global::System.Nullable<byte> Original_Position_Employee, global::System.Nullable<double> Original_Salary_Employee, string Original_Address_Employee, string Original_PhoneNumber_Employee, byte ID_Employee) {
+        public virtual int Update(string Name_Employee, global::System.Nullable<int> Position_Employee, global::System.Nullable<double> Salary_Employee, string Address_Employee, string PhoneNumber_Employee, int Original_ID_Employee, string Original_Name_Employee, global::System.Nullable<int> Original_Position_Employee, global::System.Nullable<double> Original_Salary_Employee, string Original_Address_Employee, string Original_PhoneNumber_Employee, int ID_Employee) {
             if ((Name_Employee == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6568,7 +6595,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name_Employee));
             }
             if ((Position_Employee.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte)(Position_Employee.Value));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Position_Employee.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -6591,7 +6618,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(PhoneNumber_Employee));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((byte)(Original_ID_Employee));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_Employee));
             if ((Original_Name_Employee == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
@@ -6602,7 +6629,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
             }
             if ((Original_Position_Employee.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((byte)(Original_Position_Employee.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Position_Employee.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
@@ -6632,7 +6659,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_PhoneNumber_Employee));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((byte)(ID_Employee));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(ID_Employee));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6653,7 +6680,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_Employee, global::System.Nullable<byte> Position_Employee, global::System.Nullable<double> Salary_Employee, string Address_Employee, string PhoneNumber_Employee, byte Original_ID_Employee, string Original_Name_Employee, global::System.Nullable<byte> Original_Position_Employee, global::System.Nullable<double> Original_Salary_Employee, string Original_Address_Employee, string Original_PhoneNumber_Employee) {
+        public virtual int Update(string Name_Employee, global::System.Nullable<int> Position_Employee, global::System.Nullable<double> Salary_Employee, string Address_Employee, string PhoneNumber_Employee, int Original_ID_Employee, string Original_Name_Employee, global::System.Nullable<int> Original_Position_Employee, global::System.Nullable<double> Original_Salary_Employee, string Original_Address_Employee, string Original_PhoneNumber_Employee) {
             return this.Update(Name_Employee, Position_Employee, Salary_Employee, Address_Employee, PhoneNumber_Employee, Original_ID_Employee, Original_Name_Employee, Original_Position_Employee, Original_Salary_Employee, Original_Address_Employee, Original_PhoneNumber_Employee, Original_ID_Employee);
         }
     }
@@ -6789,11 +6816,11 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Finished_Products] WHERE (([ID_Finished_Product] = @Original_ID_Finished_Product) AND ((@IsNull_Name_Finished_Product = 1 AND [Name_Finished_Product] IS NULL) OR ([Name_Finished_Product] = @Original_Name_Finished_Product)) AND ((@IsNull_UnitOfMeasurement = 1 AND [UnitOfMeasurement] IS NULL) OR ([UnitOfMeasurement] = @Original_UnitOfMeasurement)) AND ((@IsNull_Quantity_Finished_Product = 1 AND [Quantity_Finished_Product] IS NULL) OR ([Quantity_Finished_Product] = @Original_Quantity_Finished_Product)) AND ((@IsNull_Amount_Finished_Product = 1 AND [Amount_Finished_Product] IS NULL) OR ([Amount_Finished_Product] = @Original_Amount_Finished_Product)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Finished_Product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Finished_Product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Finished_Product", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Finished_Product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Finished_Product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Finished_Product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -6804,7 +6831,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
 SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_Finished_Product, Amount_Finished_Product FROM Finished_Products WHERE (ID_Finished_Product = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Finished_Product", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Finished_Product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Finished_Product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -6813,19 +6840,19 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
 SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_Finished_Product, Amount_Finished_Product FROM Finished_Products WHERE (ID_Finished_Product = @ID_Finished_Product)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Finished_Product", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Finished_Product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Finished_Product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Finished_Product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Finished_Product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Finished_Product", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Finished_Product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Finished_Product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Finished_Product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount_Finished_Product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Finished_Product", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Finished_Product", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6903,8 +6930,8 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(byte Original_ID_Finished_Product, string Original_Name_Finished_Product, global::System.Nullable<byte> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Finished_Product, global::System.Nullable<double> Original_Amount_Finished_Product) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(Original_ID_Finished_Product));
+        public virtual int Delete(int Original_ID_Finished_Product, string Original_Name_Finished_Product, global::System.Nullable<int> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Finished_Product, global::System.Nullable<double> Original_Amount_Finished_Product) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Finished_Product));
             if ((Original_Name_Finished_Product == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -6915,7 +6942,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
             }
             if ((Original_UnitOfMeasurement.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((byte)(Original_UnitOfMeasurement.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_UnitOfMeasurement.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -6957,7 +6984,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Name_Finished_Product, global::System.Nullable<byte> UnitOfMeasurement, global::System.Nullable<double> Quantity_Finished_Product, global::System.Nullable<double> Amount_Finished_Product) {
+        public virtual int Insert(string Name_Finished_Product, global::System.Nullable<int> UnitOfMeasurement, global::System.Nullable<double> Quantity_Finished_Product, global::System.Nullable<double> Amount_Finished_Product) {
             if ((Name_Finished_Product == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6965,7 +6992,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name_Finished_Product));
             }
             if ((UnitOfMeasurement.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((byte)(UnitOfMeasurement.Value));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(UnitOfMeasurement.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -7002,7 +7029,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_Finished_Product, global::System.Nullable<byte> UnitOfMeasurement, global::System.Nullable<double> Quantity_Finished_Product, global::System.Nullable<double> Amount_Finished_Product, byte Original_ID_Finished_Product, string Original_Name_Finished_Product, global::System.Nullable<byte> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Finished_Product, global::System.Nullable<double> Original_Amount_Finished_Product, byte ID_Finished_Product) {
+        public virtual int Update(string Name_Finished_Product, global::System.Nullable<int> UnitOfMeasurement, global::System.Nullable<double> Quantity_Finished_Product, global::System.Nullable<double> Amount_Finished_Product, int Original_ID_Finished_Product, string Original_Name_Finished_Product, global::System.Nullable<int> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Finished_Product, global::System.Nullable<double> Original_Amount_Finished_Product, int ID_Finished_Product) {
             if ((Name_Finished_Product == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -7010,7 +7037,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name_Finished_Product));
             }
             if ((UnitOfMeasurement.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte)(UnitOfMeasurement.Value));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(UnitOfMeasurement.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -7027,7 +7054,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(Original_ID_Finished_Product));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_Finished_Product));
             if ((Original_Name_Finished_Product == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -7038,7 +7065,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
             }
             if ((Original_UnitOfMeasurement.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((byte)(Original_UnitOfMeasurement.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_UnitOfMeasurement.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
@@ -7060,7 +7087,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((byte)(ID_Finished_Product));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(ID_Finished_Product));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7081,7 +7108,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_Finished_Product, global::System.Nullable<byte> UnitOfMeasurement, global::System.Nullable<double> Quantity_Finished_Product, global::System.Nullable<double> Amount_Finished_Product, byte Original_ID_Finished_Product, string Original_Name_Finished_Product, global::System.Nullable<byte> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Finished_Product, global::System.Nullable<double> Original_Amount_Finished_Product) {
+        public virtual int Update(string Name_Finished_Product, global::System.Nullable<int> UnitOfMeasurement, global::System.Nullable<double> Quantity_Finished_Product, global::System.Nullable<double> Amount_Finished_Product, int Original_ID_Finished_Product, string Original_Name_Finished_Product, global::System.Nullable<int> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Finished_Product, global::System.Nullable<double> Original_Amount_Finished_Product) {
             return this.Update(Name_Finished_Product, UnitOfMeasurement, Quantity_Finished_Product, Amount_Finished_Product, Original_ID_Finished_Product, Original_Name_Finished_Product, Original_UnitOfMeasurement, Original_Quantity_Finished_Product, Original_Amount_Finished_Product, Original_ID_Finished_Product);
         }
     }
@@ -7216,11 +7243,11 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Ingredients] WHERE (([ID_Ingredient] = @Original_ID_Ingredient) AND ((@IsNull_Finished_Product = 1 AND [Finished_Product] IS NULL) OR ([Finished_Product] = @Original_Finished_Product)) AND ((@IsNull_Raw_material = 1 AND [Raw_material] IS NULL) OR ([Raw_material] = @Original_Raw_material)) AND ((@IsNull_Quantity_Ingredient = 1 AND [Quantity_Ingredient] IS NULL) OR ([Quantity_Ingredient] = @Original_Quantity_Ingredient)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Ingredient", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Ingredient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Ingredient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Ingredient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Finished_Product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Raw_material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Ingredient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Ingredient", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Ingredient", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Ingredient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -7228,25 +7255,25 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Ingredients] ([Finished_Product], [Raw_material], [Quantity_Ingredient]) VALUES (@Finished_Product, @Raw_material, @Quantity_Ingredient);
 SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM Ingredients WHERE (ID_Ingredient = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Finished_Product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Raw_material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Ingredient", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Ingredient", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Ingredients] SET [Finished_Product] = @Finished_Product, [Raw_material] = @Raw_material, [Quantity_Ingredient] = @Quantity_Ingredient WHERE (([ID_Ingredient] = @Original_ID_Ingredient) AND ((@IsNull_Finished_Product = 1 AND [Finished_Product] IS NULL) OR ([Finished_Product] = @Original_Finished_Product)) AND ((@IsNull_Raw_material = 1 AND [Raw_material] IS NULL) OR ([Raw_material] = @Original_Raw_material)) AND ((@IsNull_Quantity_Ingredient = 1 AND [Quantity_Ingredient] IS NULL) OR ([Quantity_Ingredient] = @Original_Quantity_Ingredient)));
 SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM Ingredients WHERE (ID_Ingredient = @ID_Ingredient)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Finished_Product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Raw_material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Ingredient", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Ingredient", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Ingredient", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Ingredient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Ingredient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Ingredient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Finished_Product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Finished_Product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Finished_Product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Raw_material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Ingredient", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Ingredient", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Ingredient", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Ingredient", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Ingredient", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Ingredient", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Ingredient", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Ingredient", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7324,11 +7351,11 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(byte Original_ID_Ingredient, global::System.Nullable<byte> Original_Finished_Product, global::System.Nullable<byte> Original_Raw_material, global::System.Nullable<double> Original_Quantity_Ingredient) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(Original_ID_Ingredient));
+        public virtual int Delete(int Original_ID_Ingredient, global::System.Nullable<int> Original_Finished_Product, global::System.Nullable<int> Original_Raw_material, global::System.Nullable<double> Original_Quantity_Ingredient) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Ingredient));
             if ((Original_Finished_Product.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(Original_Finished_Product.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Finished_Product.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -7336,7 +7363,7 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
             }
             if ((Original_Raw_material.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((byte)(Original_Raw_material.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Raw_material.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -7370,15 +7397,15 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<byte> Finished_Product, global::System.Nullable<byte> Raw_material, global::System.Nullable<double> Quantity_Ingredient) {
+        public virtual int Insert(global::System.Nullable<int> Finished_Product, global::System.Nullable<int> Raw_material, global::System.Nullable<double> Quantity_Ingredient) {
             if ((Finished_Product.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((byte)(Finished_Product.Value));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Finished_Product.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             if ((Raw_material.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((byte)(Raw_material.Value));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Raw_material.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -7409,15 +7436,15 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<byte> Finished_Product, global::System.Nullable<byte> Raw_material, global::System.Nullable<double> Quantity_Ingredient, byte Original_ID_Ingredient, global::System.Nullable<byte> Original_Finished_Product, global::System.Nullable<byte> Original_Raw_material, global::System.Nullable<double> Original_Quantity_Ingredient, byte ID_Ingredient) {
+        public virtual int Update(global::System.Nullable<int> Finished_Product, global::System.Nullable<int> Raw_material, global::System.Nullable<double> Quantity_Ingredient, int Original_ID_Ingredient, global::System.Nullable<int> Original_Finished_Product, global::System.Nullable<int> Original_Raw_material, global::System.Nullable<double> Original_Quantity_Ingredient, int ID_Ingredient) {
             if ((Finished_Product.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((byte)(Finished_Product.Value));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Finished_Product.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             if ((Raw_material.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte)(Raw_material.Value));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Raw_material.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -7428,10 +7455,10 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((byte)(Original_ID_Ingredient));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_Ingredient));
             if ((Original_Finished_Product.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((byte)(Original_Finished_Product.Value));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Finished_Product.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
@@ -7439,7 +7466,7 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
             }
             if ((Original_Raw_material.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((byte)(Original_Raw_material.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Raw_material.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
@@ -7453,7 +7480,7 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((byte)(ID_Ingredient));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(ID_Ingredient));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7474,7 +7501,7 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<byte> Finished_Product, global::System.Nullable<byte> Raw_material, global::System.Nullable<double> Quantity_Ingredient, byte Original_ID_Ingredient, global::System.Nullable<byte> Original_Finished_Product, global::System.Nullable<byte> Original_Raw_material, global::System.Nullable<double> Original_Quantity_Ingredient) {
+        public virtual int Update(global::System.Nullable<int> Finished_Product, global::System.Nullable<int> Raw_material, global::System.Nullable<double> Quantity_Ingredient, int Original_ID_Ingredient, global::System.Nullable<int> Original_Finished_Product, global::System.Nullable<int> Original_Raw_material, global::System.Nullable<double> Original_Quantity_Ingredient) {
             return this.Update(Finished_Product, Raw_material, Quantity_Ingredient, Original_ID_Ingredient, Original_Finished_Product, Original_Raw_material, Original_Quantity_Ingredient, Original_ID_Ingredient);
         }
     }
@@ -7610,43 +7637,43 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Product_Manufacturings] WHERE (([ID_Product_Manufacturing] = @Original_ID_Product_Manufacturing) AND ((@IsNull_Product_Manufacturing = 1 AND [Product_Manufacturing] IS NULL) OR ([Product_Manufacturing] = @Original_Product_Manufacturing)) AND ((@IsNull_Quantity_Product_Manufacturing = 1 AND [Quantity_Product_Manufacturing] IS NULL) OR ([Quantity_Product_Manufacturing] = @Original_Quantity_Product_Manufacturing)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Employee = 1 AND [Employee] IS NULL) OR ([Employee] = @Original_Employee)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Product_Manufacturing", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Manufacturing", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Product_Manufacturing", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Product_Manufacturing", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Product_Manufacturings] ([Product_Manufacturing], [Quantity_Product_Manufacturing], [Date], [Employee]) VALUES (@Product_Manufacturing, @Quantity_Product_Manufacturing, @Date, @Employee);
 SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufacturing, Date, Employee FROM Product_Manufacturings WHERE (ID_Product_Manufacturing = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Manufacturing", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Product_Manufacturing", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Product_Manufacturing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Product_Manufacturings] SET [Product_Manufacturing] = @Product_Manufacturing, [Quantity_Product_Manufacturing] = @Quantity_Product_Manufacturing, [Date] = @Date, [Employee] = @Employee WHERE (([ID_Product_Manufacturing] = @Original_ID_Product_Manufacturing) AND ((@IsNull_Product_Manufacturing = 1 AND [Product_Manufacturing] IS NULL) OR ([Product_Manufacturing] = @Original_Product_Manufacturing)) AND ((@IsNull_Quantity_Product_Manufacturing = 1 AND [Quantity_Product_Manufacturing] IS NULL) OR ([Quantity_Product_Manufacturing] = @Original_Quantity_Product_Manufacturing)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Employee = 1 AND [Employee] IS NULL) OR ([Employee] = @Original_Employee)));
 SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufacturing, Date, Employee FROM Product_Manufacturings WHERE (ID_Product_Manufacturing = @ID_Product_Manufacturing)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Manufacturing", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Product_Manufacturing", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Product_Manufacturing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Product_Manufacturing", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Manufacturing", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Product_Manufacturing", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Product_Manufacturing", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Product_Manufacturing", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Product_Manufacturing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Product_Manufacturing", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Product_Manufacturing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Product_Manufacturing", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Product_Manufacturing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7724,11 +7751,11 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(byte Original_ID_Product_Manufacturing, global::System.Nullable<byte> Original_Product_Manufacturing, global::System.Nullable<double> Original_Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<byte> Original_Employee) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(Original_ID_Product_Manufacturing));
+        public virtual int Delete(int Original_ID_Product_Manufacturing, global::System.Nullable<int> Original_Product_Manufacturing, global::System.Nullable<double> Original_Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<int> Original_Employee) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Product_Manufacturing));
             if ((Original_Product_Manufacturing.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(Original_Product_Manufacturing.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Product_Manufacturing.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -7752,7 +7779,7 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
             }
             if ((Original_Employee.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((byte)(Original_Employee.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Employee.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
@@ -7778,9 +7805,9 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<byte> Product_Manufacturing, global::System.Nullable<double> Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<byte> Employee) {
+        public virtual int Insert(global::System.Nullable<int> Product_Manufacturing, global::System.Nullable<double> Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> Employee) {
             if ((Product_Manufacturing.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((byte)(Product_Manufacturing.Value));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Product_Manufacturing.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -7798,7 +7825,7 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((Employee.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((byte)(Employee.Value));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Employee.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -7823,9 +7850,9 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<byte> Product_Manufacturing, global::System.Nullable<double> Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<byte> Employee, byte Original_ID_Product_Manufacturing, global::System.Nullable<byte> Original_Product_Manufacturing, global::System.Nullable<double> Original_Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<byte> Original_Employee, byte ID_Product_Manufacturing) {
+        public virtual int Update(global::System.Nullable<int> Product_Manufacturing, global::System.Nullable<double> Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> Employee, int Original_ID_Product_Manufacturing, global::System.Nullable<int> Original_Product_Manufacturing, global::System.Nullable<double> Original_Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<int> Original_Employee, int ID_Product_Manufacturing) {
             if ((Product_Manufacturing.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((byte)(Product_Manufacturing.Value));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Product_Manufacturing.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -7843,15 +7870,15 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((Employee.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((byte)(Employee.Value));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Employee.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(Original_ID_Product_Manufacturing));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_Product_Manufacturing));
             if ((Original_Product_Manufacturing.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((byte)(Original_Product_Manufacturing.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Product_Manufacturing.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
@@ -7875,13 +7902,13 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
             }
             if ((Original_Employee.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((byte)(Original_Employee.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Employee.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((byte)(ID_Product_Manufacturing));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(ID_Product_Manufacturing));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7902,7 +7929,7 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<byte> Product_Manufacturing, global::System.Nullable<double> Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<byte> Employee, byte Original_ID_Product_Manufacturing, global::System.Nullable<byte> Original_Product_Manufacturing, global::System.Nullable<double> Original_Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<byte> Original_Employee) {
+        public virtual int Update(global::System.Nullable<int> Product_Manufacturing, global::System.Nullable<double> Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> Employee, int Original_ID_Product_Manufacturing, global::System.Nullable<int> Original_Product_Manufacturing, global::System.Nullable<double> Original_Quantity_Product_Manufacturing, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<int> Original_Employee) {
             return this.Update(Product_Manufacturing, Quantity_Product_Manufacturing, Date, Employee, Original_ID_Product_Manufacturing, Original_Product_Manufacturing, Original_Quantity_Product_Manufacturing, Original_Date, Original_Employee, Original_ID_Product_Manufacturing);
         }
     }
@@ -8039,9 +8066,9 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Purchase_Raw_Materials] WHERE (([ID_Purchase_Raw_Material] = @Original_ID_Purchase_Raw_Material) AND ((@IsNull_Raw_Material = 1 AND [Raw_Material] IS NULL) OR ([Raw_Material] = @Original_Raw_Material)) AND ((@IsNull_Quantity_Purchase_Raw_Material = 1 AND [Quantity_Purchase_Raw_Material] IS NULL) OR ([Quantity_Purchase_Raw_Material] = @Original_Quantity_Purchase_Raw_Material)) AND ((@IsNull_Amount__Purchase_Raw_Material = 1 AND [Amount__Purchase_Raw_Material] IS NULL) OR ([Amount__Purchase_Raw_Material] = @Original_Amount__Purchase_Raw_Material)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Employee = 1 AND [Employee] IS NULL) OR ([Employee] = @Original_Employee)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Purchase_Raw_Material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Purchase_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Raw_Material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Purchase_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Purchase_Raw_Material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount__Purchase_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount__Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8049,30 +8076,30 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Purchase_Raw_Materials] ([Raw_Material], [Quantity_Purchase_Raw_Material], [Amount__Purchase_Raw_Material], [Date], [Employee]) VALUES (@Raw_Material, @Quantity_Purchase_Raw_Material, @Amount__Purchase_Raw_Material, @Date, @Employee);
 SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, Amount__Purchase_Raw_Material, Date, Employee FROM Purchase_Raw_Materials WHERE (ID_Purchase_Raw_Material = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Raw_Material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Purchase_Raw_Material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Purchase_Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount__Purchase_Raw_Material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount__Purchase_Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Purchase_Raw_Materials] SET [Raw_Material] = @Raw_Material, [Quantity_Purchase_Raw_Material] = @Quantity_Purchase_Raw_Material, [Amount__Purchase_Raw_Material] = @Amount__Purchase_Raw_Material, [Date] = @Date, [Employee] = @Employee WHERE (([ID_Purchase_Raw_Material] = @Original_ID_Purchase_Raw_Material) AND ((@IsNull_Raw_Material = 1 AND [Raw_Material] IS NULL) OR ([Raw_Material] = @Original_Raw_Material)) AND ((@IsNull_Quantity_Purchase_Raw_Material = 1 AND [Quantity_Purchase_Raw_Material] IS NULL) OR ([Quantity_Purchase_Raw_Material] = @Original_Quantity_Purchase_Raw_Material)) AND ((@IsNull_Amount__Purchase_Raw_Material = 1 AND [Amount__Purchase_Raw_Material] IS NULL) OR ([Amount__Purchase_Raw_Material] = @Original_Amount__Purchase_Raw_Material)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Employee = 1 AND [Employee] IS NULL) OR ([Employee] = @Original_Employee)));
 SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, Amount__Purchase_Raw_Material, Date, Employee FROM Purchase_Raw_Materials WHERE (ID_Purchase_Raw_Material = @ID_Purchase_Raw_Material)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Raw_Material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Purchase_Raw_Material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Purchase_Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount__Purchase_Raw_Material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount__Purchase_Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Purchase_Raw_Material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Purchase_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Raw_Material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Purchase_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Purchase_Raw_Material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount__Purchase_Raw_Material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount__Purchase_Raw_Material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8080,8 +8107,8 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Purchase_Raw_Material", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Purchase_Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Purchase_Raw_Material", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Purchase_Raw_Material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8159,11 +8186,11 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(byte Original_ID_Purchase_Raw_Material, global::System.Nullable<byte> Original_Raw_Material, global::System.Nullable<double> Original_Quantity_Purchase_Raw_Material, global::System.Nullable<double> Original_Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<byte> Original_Employee) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(Original_ID_Purchase_Raw_Material));
+        public virtual int Delete(int Original_ID_Purchase_Raw_Material, global::System.Nullable<int> Original_Raw_Material, global::System.Nullable<double> Original_Quantity_Purchase_Raw_Material, global::System.Nullable<double> Original_Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<int> Original_Employee) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Purchase_Raw_Material));
             if ((Original_Raw_Material.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(Original_Raw_Material.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Raw_Material.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -8195,7 +8222,7 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
             }
             if ((Original_Employee.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((byte)(Original_Employee.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Employee.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
@@ -8221,9 +8248,9 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<byte> Raw_Material, global::System.Nullable<double> Quantity_Purchase_Raw_Material, global::System.Nullable<double> Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<byte> Employee) {
+        public virtual int Insert(global::System.Nullable<int> Raw_Material, global::System.Nullable<double> Quantity_Purchase_Raw_Material, global::System.Nullable<double> Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> Employee) {
             if ((Raw_Material.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((byte)(Raw_Material.Value));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Raw_Material.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -8247,7 +8274,7 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((Employee.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((byte)(Employee.Value));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Employee.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -8272,9 +8299,9 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<byte> Raw_Material, global::System.Nullable<double> Quantity_Purchase_Raw_Material, global::System.Nullable<double> Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<byte> Employee, byte Original_ID_Purchase_Raw_Material, global::System.Nullable<byte> Original_Raw_Material, global::System.Nullable<double> Original_Quantity_Purchase_Raw_Material, global::System.Nullable<double> Original_Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<byte> Original_Employee, byte ID_Purchase_Raw_Material) {
+        public virtual int Update(global::System.Nullable<int> Raw_Material, global::System.Nullable<double> Quantity_Purchase_Raw_Material, global::System.Nullable<double> Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> Employee, int Original_ID_Purchase_Raw_Material, global::System.Nullable<int> Original_Raw_Material, global::System.Nullable<double> Original_Quantity_Purchase_Raw_Material, global::System.Nullable<double> Original_Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<int> Original_Employee, int ID_Purchase_Raw_Material) {
             if ((Raw_Material.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((byte)(Raw_Material.Value));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Raw_Material.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -8298,15 +8325,15 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((Employee.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(Employee.Value));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Employee.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((byte)(Original_ID_Purchase_Raw_Material));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_Purchase_Raw_Material));
             if ((Original_Raw_Material.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((byte)(Original_Raw_Material.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Raw_Material.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
@@ -8338,13 +8365,13 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
             }
             if ((Original_Employee.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((byte)(Original_Employee.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Employee.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((byte)(ID_Purchase_Raw_Material));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(ID_Purchase_Raw_Material));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8365,7 +8392,7 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<byte> Raw_Material, global::System.Nullable<double> Quantity_Purchase_Raw_Material, global::System.Nullable<double> Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<byte> Employee, byte Original_ID_Purchase_Raw_Material, global::System.Nullable<byte> Original_Raw_Material, global::System.Nullable<double> Original_Quantity_Purchase_Raw_Material, global::System.Nullable<double> Original_Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<byte> Original_Employee) {
+        public virtual int Update(global::System.Nullable<int> Raw_Material, global::System.Nullable<double> Quantity_Purchase_Raw_Material, global::System.Nullable<double> Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> Employee, int Original_ID_Purchase_Raw_Material, global::System.Nullable<int> Original_Raw_Material, global::System.Nullable<double> Original_Quantity_Purchase_Raw_Material, global::System.Nullable<double> Original_Amount__Purchase_Raw_Material, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<int> Original_Employee) {
             return this.Update(Raw_Material, Quantity_Purchase_Raw_Material, Amount__Purchase_Raw_Material, Date, Employee, Original_ID_Purchase_Raw_Material, Original_Raw_Material, Original_Quantity_Purchase_Raw_Material, Original_Amount__Purchase_Raw_Material, Original_Date, Original_Employee, Original_ID_Purchase_Raw_Material);
         }
     }
@@ -8501,11 +8528,11 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Raw_materials] WHERE (([ID_Raw_material] = @Original_ID_Raw_material) AND ((@IsNull_Name_Raw_material = 1 AND [Name_Raw_material] IS NULL) OR ([Name_Raw_material] = @Original_Name_Raw_material)) AND ((@IsNull_UnitOfMeasurement = 1 AND [UnitOfMeasurement] IS NULL) OR ([UnitOfMeasurement] = @Original_UnitOfMeasurement)) AND ((@IsNull_Quantity_Raw_material = 1 AND [Quantity_Raw_material] IS NULL) OR ([Quantity_Raw_material] = @Original_Quantity_Raw_material)) AND ((@IsNull_Amount_Raw_material = 1 AND [Amount_Raw_material] IS NULL) OR ([Amount_Raw_material] = @Original_Amount_Raw_material)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Raw_material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Raw_material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Raw_material", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Raw_material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Raw_material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Raw_material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8516,7 +8543,7 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
 SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_material, Amount_Raw_material FROM Raw_materials WHERE (ID_Raw_material = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Raw_material", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Raw_material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Raw_material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -8525,19 +8552,19 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
 SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_material, Amount_Raw_material FROM Raw_materials WHERE (ID_Raw_material = @ID_Raw_material)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Raw_material", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Raw_material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Raw_material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Raw_material", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Raw_material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Raw_material", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Raw_material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Raw_material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount_Raw_material", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Raw_material", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount_Raw_material", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Raw_material", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Raw_material", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Raw_material", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Raw_material", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8615,8 +8642,8 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(byte Original_ID_Raw_material, string Original_Name_Raw_material, global::System.Nullable<byte> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Raw_material, global::System.Nullable<double> Original_Amount_Raw_material) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(Original_ID_Raw_material));
+        public virtual int Delete(int Original_ID_Raw_material, string Original_Name_Raw_material, global::System.Nullable<int> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Raw_material, global::System.Nullable<double> Original_Amount_Raw_material) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Raw_material));
             if ((Original_Name_Raw_material == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -8627,7 +8654,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
             }
             if ((Original_UnitOfMeasurement.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((byte)(Original_UnitOfMeasurement.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_UnitOfMeasurement.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -8669,7 +8696,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Name_Raw_material, global::System.Nullable<byte> UnitOfMeasurement, global::System.Nullable<double> Quantity_Raw_material, global::System.Nullable<double> Amount_Raw_material) {
+        public virtual int Insert(string Name_Raw_material, global::System.Nullable<int> UnitOfMeasurement, global::System.Nullable<double> Quantity_Raw_material, global::System.Nullable<double> Amount_Raw_material) {
             if ((Name_Raw_material == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -8677,7 +8704,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name_Raw_material));
             }
             if ((UnitOfMeasurement.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((byte)(UnitOfMeasurement.Value));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(UnitOfMeasurement.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -8714,7 +8741,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_Raw_material, global::System.Nullable<byte> UnitOfMeasurement, global::System.Nullable<double> Quantity_Raw_material, global::System.Nullable<double> Amount_Raw_material, byte Original_ID_Raw_material, string Original_Name_Raw_material, global::System.Nullable<byte> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Raw_material, global::System.Nullable<double> Original_Amount_Raw_material, byte ID_Raw_material) {
+        public virtual int Update(string Name_Raw_material, global::System.Nullable<int> UnitOfMeasurement, global::System.Nullable<double> Quantity_Raw_material, global::System.Nullable<double> Amount_Raw_material, int Original_ID_Raw_material, string Original_Name_Raw_material, global::System.Nullable<int> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Raw_material, global::System.Nullable<double> Original_Amount_Raw_material, int ID_Raw_material) {
             if ((Name_Raw_material == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -8722,7 +8749,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name_Raw_material));
             }
             if ((UnitOfMeasurement.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte)(UnitOfMeasurement.Value));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(UnitOfMeasurement.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -8739,7 +8766,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(Original_ID_Raw_material));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_Raw_material));
             if ((Original_Name_Raw_material == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -8750,7 +8777,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
             }
             if ((Original_UnitOfMeasurement.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((byte)(Original_UnitOfMeasurement.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_UnitOfMeasurement.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
@@ -8772,7 +8799,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((byte)(ID_Raw_material));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(ID_Raw_material));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8793,7 +8820,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_Raw_material, global::System.Nullable<byte> UnitOfMeasurement, global::System.Nullable<double> Quantity_Raw_material, global::System.Nullable<double> Amount_Raw_material, byte Original_ID_Raw_material, string Original_Name_Raw_material, global::System.Nullable<byte> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Raw_material, global::System.Nullable<double> Original_Amount_Raw_material) {
+        public virtual int Update(string Name_Raw_material, global::System.Nullable<int> UnitOfMeasurement, global::System.Nullable<double> Quantity_Raw_material, global::System.Nullable<double> Amount_Raw_material, int Original_ID_Raw_material, string Original_Name_Raw_material, global::System.Nullable<int> Original_UnitOfMeasurement, global::System.Nullable<double> Original_Quantity_Raw_material, global::System.Nullable<double> Original_Amount_Raw_material) {
             return this.Update(Name_Raw_material, UnitOfMeasurement, Quantity_Raw_material, Amount_Raw_material, Original_ID_Raw_material, Original_Name_Raw_material, Original_UnitOfMeasurement, Original_Quantity_Raw_material, Original_Amount_Raw_material, Original_ID_Raw_material);
         }
     }
@@ -8930,9 +8957,9 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Sales_of_products] WHERE (([ID_Sales_of_product] = @Original_ID_Sales_of_product) AND ((@IsNull_Product_Sales_of_product = 1 AND [Product_Sales_of_product] IS NULL) OR ([Product_Sales_of_product] = @Original_Product_Sales_of_product)) AND ((@IsNull_Quantity_Sales_of_product = 1 AND [Quantity_Sales_of_product] IS NULL) OR ([Quantity_Sales_of_product] = @Original_Quantity_Sales_of_product)) AND ((@IsNull_Amount_Sales_of_product = 1 AND [Amount_Sales_of_product] IS NULL) OR ([Amount_Sales_of_product] = @Original_Amount_Sales_of_product)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Employee = 1 AND [Employee] IS NULL) OR ([Employee] = @Original_Employee)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Sales_of_product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Product_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Sales_of_product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Sales_of_product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Sales_of_product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Sales_of_product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8940,30 +8967,30 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Sales_of_products] ([Product_Sales_of_product], [Quantity_Sales_of_product], [Amount_Sales_of_product], [Date], [Employee]) VALUES (@Product_Sales_of_product, @Quantity_Sales_of_product, @Amount_Sales_of_product, @Date, @Employee);
 SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product, Amount_Sales_of_product, Date, Employee FROM Sales_of_products WHERE (ID_Sales_of_product = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Sales_of_product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Sales_of_product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Sales_of_product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Sales_of_products] SET [Product_Sales_of_product] = @Product_Sales_of_product, [Quantity_Sales_of_product] = @Quantity_Sales_of_product, [Amount_Sales_of_product] = @Amount_Sales_of_product, [Date] = @Date, [Employee] = @Employee WHERE (([ID_Sales_of_product] = @Original_ID_Sales_of_product) AND ((@IsNull_Product_Sales_of_product = 1 AND [Product_Sales_of_product] IS NULL) OR ([Product_Sales_of_product] = @Original_Product_Sales_of_product)) AND ((@IsNull_Quantity_Sales_of_product = 1 AND [Quantity_Sales_of_product] IS NULL) OR ([Quantity_Sales_of_product] = @Original_Quantity_Sales_of_product)) AND ((@IsNull_Amount_Sales_of_product = 1 AND [Amount_Sales_of_product] IS NULL) OR ([Amount_Sales_of_product] = @Original_Amount_Sales_of_product)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Employee = 1 AND [Employee] IS NULL) OR ([Employee] = @Original_Employee)));
 SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product, Amount_Sales_of_product, Date, Employee FROM Sales_of_products WHERE (ID_Sales_of_product = @ID_Sales_of_product)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Sales_of_product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Sales_of_product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Sales_of_product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Sales_of_product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Product_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Sales_of_product", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Sales_of_product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity_Sales_of_product", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity_Sales_of_product", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount_Sales_of_product", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Sales_of_product", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8971,8 +8998,8 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Sales_of_product", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Employee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Sales_of_product", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Sales_of_product", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9050,11 +9077,11 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(byte Original_ID_Sales_of_product, global::System.Nullable<byte> Original_Product_Sales_of_product, global::System.Nullable<double> Original_Quantity_Sales_of_product, global::System.Nullable<double> Original_Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<byte> Original_Employee) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(Original_ID_Sales_of_product));
+        public virtual int Delete(int Original_ID_Sales_of_product, global::System.Nullable<int> Original_Product_Sales_of_product, global::System.Nullable<double> Original_Quantity_Sales_of_product, global::System.Nullable<double> Original_Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<int> Original_Employee) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Sales_of_product));
             if ((Original_Product_Sales_of_product.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(Original_Product_Sales_of_product.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Product_Sales_of_product.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -9086,7 +9113,7 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
             }
             if ((Original_Employee.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((byte)(Original_Employee.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Employee.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
@@ -9112,9 +9139,9 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<byte> Product_Sales_of_product, global::System.Nullable<double> Quantity_Sales_of_product, global::System.Nullable<double> Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<byte> Employee) {
+        public virtual int Insert(global::System.Nullable<int> Product_Sales_of_product, global::System.Nullable<double> Quantity_Sales_of_product, global::System.Nullable<double> Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> Employee) {
             if ((Product_Sales_of_product.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((byte)(Product_Sales_of_product.Value));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Product_Sales_of_product.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -9138,7 +9165,7 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((Employee.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((byte)(Employee.Value));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Employee.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -9163,9 +9190,9 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<byte> Product_Sales_of_product, global::System.Nullable<double> Quantity_Sales_of_product, global::System.Nullable<double> Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<byte> Employee, byte Original_ID_Sales_of_product, global::System.Nullable<byte> Original_Product_Sales_of_product, global::System.Nullable<double> Original_Quantity_Sales_of_product, global::System.Nullable<double> Original_Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<byte> Original_Employee, byte ID_Sales_of_product) {
+        public virtual int Update(global::System.Nullable<int> Product_Sales_of_product, global::System.Nullable<double> Quantity_Sales_of_product, global::System.Nullable<double> Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> Employee, int Original_ID_Sales_of_product, global::System.Nullable<int> Original_Product_Sales_of_product, global::System.Nullable<double> Original_Quantity_Sales_of_product, global::System.Nullable<double> Original_Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<int> Original_Employee, int ID_Sales_of_product) {
             if ((Product_Sales_of_product.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((byte)(Product_Sales_of_product.Value));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Product_Sales_of_product.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -9189,15 +9216,15 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((Employee.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(Employee.Value));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Employee.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((byte)(Original_ID_Sales_of_product));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_Sales_of_product));
             if ((Original_Product_Sales_of_product.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((byte)(Original_Product_Sales_of_product.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Product_Sales_of_product.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
@@ -9229,13 +9256,13 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
             }
             if ((Original_Employee.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((byte)(Original_Employee.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Employee.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((byte)(ID_Sales_of_product));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(ID_Sales_of_product));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9256,7 +9283,7 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<byte> Product_Sales_of_product, global::System.Nullable<double> Quantity_Sales_of_product, global::System.Nullable<double> Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<byte> Employee, byte Original_ID_Sales_of_product, global::System.Nullable<byte> Original_Product_Sales_of_product, global::System.Nullable<double> Original_Quantity_Sales_of_product, global::System.Nullable<double> Original_Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<byte> Original_Employee) {
+        public virtual int Update(global::System.Nullable<int> Product_Sales_of_product, global::System.Nullable<double> Quantity_Sales_of_product, global::System.Nullable<double> Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Date, global::System.Nullable<int> Employee, int Original_ID_Sales_of_product, global::System.Nullable<int> Original_Product_Sales_of_product, global::System.Nullable<double> Original_Quantity_Sales_of_product, global::System.Nullable<double> Original_Amount_Sales_of_product, global::System.Nullable<global::System.DateTime> Original_Date, global::System.Nullable<int> Original_Employee) {
             return this.Update(Product_Sales_of_product, Quantity_Sales_of_product, Amount_Sales_of_product, Date, Employee, Original_ID_Sales_of_product, Original_Product_Sales_of_product, Original_Quantity_Sales_of_product, Original_Amount_Sales_of_product, Original_Date, Original_Employee, Original_ID_Sales_of_product);
         }
     }
@@ -9392,7 +9419,7 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
                 "Measurement] IS NULL) OR ([Name_UnitOfMeasurement] = @Original_Name_UnitOfMeasur" +
                 "ement)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_UnitOfMeasurement", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_UnitOfMeasurement", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -9408,10 +9435,10 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
 SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHERE (ID_UnitOfMeasurement = @ID_UnitOfMeasurement)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_UnitOfMeasurement", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_UnitOfMeasurement", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_UnitOfMeasurement", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_UnitOfMeasurement", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_UnitOfMeasurement", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "ID_UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_UnitOfMeasurement", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_UnitOfMeasurement", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9488,8 +9515,8 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(byte Original_ID_UnitOfMeasurement, string Original_Name_UnitOfMeasurement) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((byte)(Original_ID_UnitOfMeasurement));
+        public virtual int Delete(int Original_ID_UnitOfMeasurement, string Original_Name_UnitOfMeasurement) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_UnitOfMeasurement));
             if ((Original_Name_UnitOfMeasurement == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -9545,14 +9572,14 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_UnitOfMeasurement, byte Original_ID_UnitOfMeasurement, string Original_Name_UnitOfMeasurement, byte ID_UnitOfMeasurement) {
+        public virtual int Update(string Name_UnitOfMeasurement, int Original_ID_UnitOfMeasurement, string Original_Name_UnitOfMeasurement, int ID_UnitOfMeasurement) {
             if ((Name_UnitOfMeasurement == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name_UnitOfMeasurement));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((byte)(Original_ID_UnitOfMeasurement));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ID_UnitOfMeasurement));
             if ((Original_Name_UnitOfMeasurement == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -9561,7 +9588,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Name_UnitOfMeasurement));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(ID_UnitOfMeasurement));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ID_UnitOfMeasurement));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9582,7 +9609,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name_UnitOfMeasurement, byte Original_ID_UnitOfMeasurement, string Original_Name_UnitOfMeasurement) {
+        public virtual int Update(string Name_UnitOfMeasurement, int Original_ID_UnitOfMeasurement, string Original_Name_UnitOfMeasurement) {
             return this.Update(Name_UnitOfMeasurement, Original_ID_UnitOfMeasurement, Original_Name_UnitOfMeasurement, Original_ID_UnitOfMeasurement);
         }
     }

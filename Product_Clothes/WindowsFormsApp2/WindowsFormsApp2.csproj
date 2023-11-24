@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -122,8 +124,14 @@
     <EmbeddedResource Include="Budget.resx">
       <DependentUpon>Budget.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee_Position.resx">
       <DependentUpon>Employee_Position.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished_Products.resx">
+      <DependentUpon>Finished_Products.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -137,6 +145,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Raw_Material.resx">
+      <DependentUpon>Raw_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unit_Of_Measurements.resx">
+      <DependentUpon>Unit_Of_Measurements.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DB_accounting_material_financial_assetsDataSet.xsc">
       <DependentUpon>DB_accounting_material_financial_assetsDataSet.xsd</DependentUpon>
     </None>
