@@ -8,6 +8,9 @@ namespace WindowsFormsApp2
 {
     internal static class Program
     {
+        public static String strConnection =
+             @"Data Source=DESKTOP-40QVERS;Initial Catalog=DB_accounting_material_financial_assets;User ID=sa;Password=2004;";
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

@@ -33,5 +33,16 @@ namespace WindowsFormsApp2.Properties {
                 return ((string)(this["DB_accounting_material_financial_assetsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-40QVERS;Initial Catalog=DB_accounting_material_financial_asse" +
+            "ts;Integrated Security=True")]
+        public string DB_accounting_material_financial_assetsConnectionString1 {
+            get {
+                return ((string)(this["DB_accounting_material_financial_assetsConnectionString1"]));
+            }
+        }
     }
 }

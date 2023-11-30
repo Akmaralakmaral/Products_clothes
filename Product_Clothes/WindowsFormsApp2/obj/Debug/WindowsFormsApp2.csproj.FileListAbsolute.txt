@@ -28,3 +28,6 @@ C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3
 C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Unit_Of_Measurements.resources
 C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Finished_Products.resources
 C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Raw_Material.resources
+C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Ingredients.resources
+C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.IngredientAdd.resources
+C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.IngredientUpdate.resources

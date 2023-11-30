@@ -41,6 +41,8 @@ namespace WindowsFormsApp2
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "dB_accounting_material_financial_assetsDataSet.UnitOfMeasurements". При необходимости она может быть перемещена или удалена.
             this.unitOfMeasurementsTableAdapter.Fill(this.dB_accounting_material_financial_assetsDataSet.UnitOfMeasurements);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dB_accounting_material_financial_assetsDataSet.UnitOfMeasurements". При необходимости она может быть перемещена или удалена.
+            this.unitOfMeasurementsTableAdapter.Fill(this.dB_accounting_material_financial_assetsDataSet.UnitOfMeasurements);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "dB_accounting_material_financial_assetsDataSet.Finished_Products". При необходимости она может быть перемещена или удалена.
             this.finished_ProductsTableAdapter.Fill(this.dB_accounting_material_financial_assetsDataSet.Finished_Products);
 

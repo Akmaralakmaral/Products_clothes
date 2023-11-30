@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class Ingredients
+    partial class IngredientUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingredients));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IngredientUpdate));
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.IngredientsDataGridView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Raw_material = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dB_accounting_material_financial_assetsDataSet = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSet();
             this.finished_ProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finished_ProductsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Finished_ProductsTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.TableAdapterManager();
-            this.ingredientsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.IngredientsTableAdapter();
-            this.raw_materialsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Raw_materialsTableAdapter();
             this.finished_ProductsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -54,63 +55,95 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.finished_ProductsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.finished_ProductsListBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.finished_ProductsComboBox = new System.Windows.Forms.ComboBox();
+            this.raw_materialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.raw_materialsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Raw_materialsTableAdapter();
+            this.raw_materialsComboBox = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.finished_ProductsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.finished_ProductsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.finished_ProductsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.IngredientsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_accounting_material_financial_assetsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingNavigator)).BeginInit();
             this.finished_ProductsBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.raw_materialsBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(20, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 46);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Изменить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(225, 25);
+            this.label1.Location = new System.Drawing.Point(44, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Ингредиенты";
+            this.label1.Size = new System.Drawing.Size(252, 25);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Изменить Ингредиент";
             // 
-            // IngredientsDataGridView
+            // label4
             // 
-            this.IngredientsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IngredientsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.IngredientsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.IngredientsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Raw_material,
-            this.Count});
-            this.IngredientsDataGridView.Location = new System.Drawing.Point(139, 53);
-            this.IngredientsDataGridView.Name = "IngredientsDataGridView";
-            this.IngredientsDataGridView.Size = new System.Drawing.Size(380, 220);
-            this.IngredientsDataGridView.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(18, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 16);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Quantity_Ingredient";
             // 
-            // ID
+            // label3
             // 
-            this.ID.HeaderText = "ID_Ingredient";
-            this.ID.Name = "ID";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(18, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 16);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Raw_material";
             // 
-            // Raw_material
+            // label2
             // 
-            this.Raw_material.HeaderText = "Raw_material";
-            this.Raw_material.Name = "Raw_material";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(18, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 16);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Finished_Product";
             // 
-            // Count
+            // textBox4
             // 
-            this.Count.HeaderText = "Quantity_Ingredient";
-            this.Count.Name = "Count";
+            this.textBox4.Location = new System.Drawing.Point(145, 158);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(168, 20);
+            this.textBox4.TabIndex = 27;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(18, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 16);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "ID_Ingredient";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(145, 74);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 20);
+            this.textBox1.TabIndex = 35;
             // 
             // dB_accounting_material_financial_assetsDataSet
             // 
@@ -133,21 +166,13 @@
             this.tableAdapterManager.Employee_PositionsTableAdapter = null;
             this.tableAdapterManager.EmployeesTableAdapter = null;
             this.tableAdapterManager.Finished_ProductsTableAdapter = this.finished_ProductsTableAdapter;
-            this.tableAdapterManager.IngredientsTableAdapter = this.ingredientsTableAdapter;
+            this.tableAdapterManager.IngredientsTableAdapter = null;
             this.tableAdapterManager.Product_ManufacturingsTableAdapter = null;
             this.tableAdapterManager.Purchase_Raw_MaterialsTableAdapter = null;
-            this.tableAdapterManager.Raw_materialsTableAdapter = this.raw_materialsTableAdapter;
+            this.tableAdapterManager.Raw_materialsTableAdapter = null;
             this.tableAdapterManager.Sales_of_productsTableAdapter = null;
             this.tableAdapterManager.UnitOfMeasurementsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // ingredientsTableAdapter
-            // 
-            this.ingredientsTableAdapter.ClearBeforeFill = true;
-            // 
-            // raw_materialsTableAdapter
-            // 
-            this.raw_materialsTableAdapter.ClearBeforeFill = true;
             // 
             // finished_ProductsBindingNavigator
             // 
@@ -175,8 +200,8 @@
             this.finished_ProductsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.finished_ProductsBindingNavigator.Name = "finished_ProductsBindingNavigator";
             this.finished_ProductsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.finished_ProductsBindingNavigator.Size = new System.Drawing.Size(627, 25);
-            this.finished_ProductsBindingNavigator.TabIndex = 8;
+            this.finished_ProductsBindingNavigator.Size = new System.Drawing.Size(329, 25);
+            this.finished_ProductsBindingNavigator.TabIndex = 37;
             this.finished_ProductsBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
@@ -274,95 +299,87 @@
             this.finished_ProductsBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.finished_ProductsBindingNavigatorSaveItem.Click += new System.EventHandler(this.finished_ProductsBindingNavigatorSaveItem_Click);
             // 
-            // finished_ProductsListBox
+            // finished_ProductsComboBox
             // 
-            this.finished_ProductsListBox.DataSource = this.finished_ProductsBindingSource;
-            this.finished_ProductsListBox.DisplayMember = "Name_Finished_Product";
-            this.finished_ProductsListBox.FormattingEnabled = true;
-            this.finished_ProductsListBox.Location = new System.Drawing.Point(12, 53);
-            this.finished_ProductsListBox.Name = "finished_ProductsListBox";
-            this.finished_ProductsListBox.Size = new System.Drawing.Size(121, 225);
-            this.finished_ProductsListBox.TabIndex = 8;
-            this.finished_ProductsListBox.ValueMember = "ID_Finished_Product";
-            this.finished_ProductsListBox.SelectedIndexChanged += new System.EventHandler(this.finished_ProductsListBox_SelectedIndexChanged);
+            this.finished_ProductsComboBox.DataSource = this.finished_ProductsBindingSource;
+            this.finished_ProductsComboBox.DisplayMember = "Name_Finished_Product";
+            this.finished_ProductsComboBox.FormattingEnabled = true;
+            this.finished_ProductsComboBox.Location = new System.Drawing.Point(145, 102);
+            this.finished_ProductsComboBox.Name = "finished_ProductsComboBox";
+            this.finished_ProductsComboBox.Size = new System.Drawing.Size(168, 21);
+            this.finished_ProductsComboBox.TabIndex = 37;
+            this.finished_ProductsComboBox.ValueMember = "ID_Finished_Product";
             // 
-            // button1
+            // raw_materialsBindingSource
             // 
-            this.button1.Location = new System.Drawing.Point(525, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 46);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.raw_materialsBindingSource.DataMember = "Raw_materials";
+            this.raw_materialsBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
+            // 
+            // raw_materialsTableAdapter
+            // 
+            this.raw_materialsTableAdapter.ClearBeforeFill = true;
+            // 
+            // raw_materialsComboBox
+            // 
+            this.raw_materialsComboBox.DataSource = this.raw_materialsBindingSource;
+            this.raw_materialsComboBox.DisplayMember = "Name_Raw_material";
+            this.raw_materialsComboBox.FormattingEnabled = true;
+            this.raw_materialsComboBox.Location = new System.Drawing.Point(145, 131);
+            this.raw_materialsComboBox.Name = "raw_materialsComboBox";
+            this.raw_materialsComboBox.Size = new System.Drawing.Size(168, 21);
+            this.raw_materialsComboBox.TabIndex = 37;
+            this.raw_materialsComboBox.ValueMember = "ID_Raw_material";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(525, 143);
+            this.button2.Location = new System.Drawing.Point(204, 191);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 46);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Изменить";
+            this.button2.Size = new System.Drawing.Size(109, 46);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Закрыть";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(525, 227);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 46);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Удаление";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // finished_ProductsBindingSource1
-            // 
-            this.finished_ProductsBindingSource1.DataMember = "Finished_Products";
-            this.finished_ProductsBindingSource1.DataSource = this.dB_accounting_material_financial_assetsDataSet;
-            // 
-            // finished_ProductsBindingSource2
-            // 
-            this.finished_ProductsBindingSource2.DataMember = "Finished_Products";
-            this.finished_ProductsBindingSource2.DataSource = this.dB_accounting_material_financial_assetsDataSet;
-            // 
-            // finished_ProductsBindingSource3
-            // 
-            this.finished_ProductsBindingSource3.DataMember = "Finished_Products";
-            this.finished_ProductsBindingSource3.DataSource = this.dB_accounting_material_financial_assetsDataSet;
-            // 
-            // Ingredients
+            // IngredientUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 285);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(329, 249);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.finished_ProductsListBox);
+            this.Controls.Add(this.raw_materialsComboBox);
+            this.Controls.Add(this.finished_ProductsComboBox);
             this.Controls.Add(this.finished_ProductsBindingNavigator);
-            this.Controls.Add(this.IngredientsDataGridView);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Name = "Ingredients";
-            this.Text = "Ingredients";
-            this.Load += new System.EventHandler(this.Ingredients_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.IngredientsDataGridView)).EndInit();
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox4);
+            this.Name = "IngredientUpdate";
+            this.Text = "IngredientUpdate";
+            this.Load += new System.EventHandler(this.IngredientUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dB_accounting_material_financial_assetsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingNavigator)).EndInit();
             this.finished_ProductsBindingNavigator.ResumeLayout(false);
             this.finished_ProductsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.raw_materialsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView IngredientsDataGridView;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
         private DB_accounting_material_financial_assetsDataSet dB_accounting_material_financial_assetsDataSet;
         private System.Windows.Forms.BindingSource finished_ProductsBindingSource;
         private DB_accounting_material_financial_assetsDataSetTableAdapters.Finished_ProductsTableAdapter finished_ProductsTableAdapter;
@@ -380,17 +397,10 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton finished_ProductsBindingNavigatorSaveItem;
-        private System.Windows.Forms.ListBox finished_ProductsListBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.BindingSource finished_ProductsBindingSource1;
-        private System.Windows.Forms.BindingSource finished_ProductsBindingSource2;
-        private System.Windows.Forms.BindingSource finished_ProductsBindingSource3;
+        private System.Windows.Forms.ComboBox finished_ProductsComboBox;
+        private System.Windows.Forms.BindingSource raw_materialsBindingSource;
         private DB_accounting_material_financial_assetsDataSetTableAdapters.Raw_materialsTableAdapter raw_materialsTableAdapter;
-        private DB_accounting_material_financial_assetsDataSetTableAdapters.IngredientsTableAdapter ingredientsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Raw_material;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
+        private System.Windows.Forms.ComboBox raw_materialsComboBox;
+        private System.Windows.Forms.Button button2;
     }
 }

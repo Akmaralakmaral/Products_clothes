@@ -83,11 +83,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IngredientAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngredientAdd.Designer.cs">
+      <DependentUpon>IngredientAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingredients.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ingredients.Designer.cs">
       <DependentUpon>Ingredients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngredientUpdate.Designer.cs">
+      <DependentUpon>IngredientUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Product_Manufacturing.cs">
       <SubType>Form</SubType>
@@ -135,6 +147,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngredientAdd.resx">
+      <DependentUpon>IngredientAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingredients.resx">
+      <DependentUpon>Ingredients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngredientUpdate.resx">
+      <DependentUpon>IngredientUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
