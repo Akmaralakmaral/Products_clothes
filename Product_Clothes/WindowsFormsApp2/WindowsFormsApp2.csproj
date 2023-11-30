@@ -125,6 +125,12 @@
     <Compile Include="Production.Designer.cs">
       <DependentUpon>Production.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductionViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionViewer.Designer.cs">
+      <DependentUpon>ProductionViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product_Manufacturing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     <EmbeddedResource Include="Production.resx">
       <DependentUpon>Production.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductionViewer.resx">
+      <DependentUpon>ProductionViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -224,6 +233,7 @@
     <EmbeddedResource Include="Raw_Material.resx">
       <DependentUpon>Raw_Material.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportProduction.rdlc" />
     <EmbeddedResource Include="ReportPuchase.rdlc" />
     <EmbeddedResource Include="Sale.resx">
       <DependentUpon>Sale.cs</DependentUpon>

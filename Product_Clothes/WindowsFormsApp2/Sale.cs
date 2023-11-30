@@ -16,9 +16,6 @@ namespace WindowsFormsApp2
         public Sale()
         {
             InitializeComponent();
-            saleDataGridView.Columns[0].Width = 30;
-            saleDataGridView.Columns[3].Width = 20;
-            saleDataGridView.Columns[4].Width = 40;
             var box = new DataGridViewComboBoxColumn();
             box.HeaderText = "Product_Sales_Of_Product";
             box.DataSource = finished_ProductsTableAdapter.GetData();

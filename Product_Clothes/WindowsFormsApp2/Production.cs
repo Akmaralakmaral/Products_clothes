@@ -68,5 +68,11 @@ namespace WindowsFormsApp2
             productionDataGridView.Update();
             productionDataGridView.Refresh();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProductionViewer form = new ProductionViewer(dateTimePicker1, dateTimePicker2);
+            form.Show();
+        }
     }
 }
