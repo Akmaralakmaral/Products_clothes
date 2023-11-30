@@ -71,5 +71,7 @@ namespace WindowsFormsApp2
             purchaseViewer form = new purchaseViewer(dateTimePicker1, dateTimePicker2);
             form.Show();
         }
+
+        
     }
 }

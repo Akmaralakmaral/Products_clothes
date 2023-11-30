@@ -55,7 +55,7 @@ namespace WindowsFormsApp2
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Product_Manufacturing form = new Product_Manufacturing();
+            Production form = new Production();
             form.Show();
         }
 
@@ -75,7 +75,7 @@ namespace WindowsFormsApp2
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Sales_Of_Product form = new Sales_Of_Product();
+            Sale form = new Sale();
             form.Show();
         }
     }

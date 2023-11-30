@@ -37,19 +37,19 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dB_accounting_material_financial_assetsDataSet = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSet();
             this.tableAdapterManager = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.TableAdapterManager();
-            this.purchaseDataGridView = new System.Windows.Forms.DataGridView();
-            this.purchase_Raw_MaterialsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Purchase_Raw_MaterialsTableAdapter();
-            this.purchase_Raw_MaterialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.raw_materialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.raw_materialsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Raw_materialsTableAdapter();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeesTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.EmployeesTableAdapter();
+            this.purchase_Raw_MaterialsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Purchase_Raw_MaterialsTableAdapter();
+            this.raw_materialsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Raw_materialsTableAdapter();
+            this.purchaseDataGridView = new System.Windows.Forms.DataGridView();
             this.iDPurchaseRawMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rawMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityPurchaseRawMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountPurchaseRawMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchase_Raw_MaterialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.raw_materialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dB_accounting_material_financial_assetsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchase_Raw_MaterialsBindingSource)).BeginInit();
@@ -66,6 +66,7 @@
             this.label3.Size = new System.Drawing.Size(177, 25);
             this.label3.TabIndex = 33;
             this.label3.Text = "Закупка Сырья";
+           // this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -129,6 +130,18 @@
             this.tableAdapterManager.UnitOfMeasurementsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
+            // 
+            // purchase_Raw_MaterialsTableAdapter
+            // 
+            this.purchase_Raw_MaterialsTableAdapter.ClearBeforeFill = true;
+            // 
+            // raw_materialsTableAdapter
+            // 
+            this.raw_materialsTableAdapter.ClearBeforeFill = true;
+            // 
             // purchaseDataGridView
             // 
             this.purchaseDataGridView.AutoGenerateColumns = false;
@@ -145,33 +158,6 @@
             this.purchaseDataGridView.Name = "purchaseDataGridView";
             this.purchaseDataGridView.Size = new System.Drawing.Size(885, 371);
             this.purchaseDataGridView.TabIndex = 34;
-            // 
-            // purchase_Raw_MaterialsTableAdapter
-            // 
-            this.purchase_Raw_MaterialsTableAdapter.ClearBeforeFill = true;
-            // 
-            // purchase_Raw_MaterialsBindingSource
-            // 
-            this.purchase_Raw_MaterialsBindingSource.DataMember = "Purchase_Raw_Materials";
-            this.purchase_Raw_MaterialsBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
-            // 
-            // raw_materialsBindingSource
-            // 
-            this.raw_materialsBindingSource.DataMember = "Raw_materials";
-            this.raw_materialsBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
-            // 
-            // raw_materialsTableAdapter
-            // 
-            this.raw_materialsTableAdapter.ClearBeforeFill = true;
-            // 
-            // employeesBindingSource
-            // 
-            this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
-            // 
-            // employeesTableAdapter
-            // 
-            this.employeesTableAdapter.ClearBeforeFill = true;
             // 
             // iDPurchaseRawMaterialDataGridViewTextBoxColumn
             // 
@@ -221,6 +207,21 @@
             this.employeeDataGridViewTextBoxColumn.HeaderText = "Employee";
             this.employeeDataGridViewTextBoxColumn.Name = "employeeDataGridViewTextBoxColumn";
             this.employeeDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // purchase_Raw_MaterialsBindingSource
+            // 
+            this.purchase_Raw_MaterialsBindingSource.DataMember = "Purchase_Raw_Materials";
+            this.purchase_Raw_MaterialsBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
+            // 
+            // raw_materialsBindingSource
+            // 
+            this.raw_materialsBindingSource.DataMember = "Raw_materials";
+            this.raw_materialsBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
+            // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
             // 
             // Purchase
             // 

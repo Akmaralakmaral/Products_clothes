@@ -658,6 +658,26 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductionTableAdapter" GeneratorDataComponentClassName="ProductionTableAdapter" Name="Production" UserDataComponentName="ProductionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Production" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_Product_Manufacturing, Quantity_Product_Manufacturing, Date, Name_Finished_Product, Name_Employee FROM dbo.Production</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Product_Manufacturing" DataSetColumn="ID_Product_Manufacturing" />
+              <Mapping SourceColumn="Quantity_Product_Manufacturing" DataSetColumn="Quantity_Product_Manufacturing" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Name_Finished_Product" DataSetColumn="Name_Finished_Product" />
+              <Mapping SourceColumn="Name_Employee" DataSetColumn="Name_Employee" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PurchaseTableAdapter" GeneratorDataComponentClassName="PurchaseTableAdapter" Name="Purchase" UserDataComponentName="PurchaseTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Purchase" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -675,6 +695,27 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
               <Mapping SourceColumn="Amount__Purchase_Raw_Material" DataSetColumn="Amount__Purchase_Raw_Material" />
               <Mapping SourceColumn="Date" DataSetColumn="Date" />
               <Mapping SourceColumn="Name_Raw_material" DataSetColumn="Name_Raw_material" />
+              <Mapping SourceColumn="Name_Employee" DataSetColumn="Name_Employee" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SaleTableAdapter" GeneratorDataComponentClassName="SaleTableAdapter" Name="Sale" UserDataComponentName="SaleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Sale" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_Sales_of_product, Quantity_Sales_of_product, Amount_Sales_of_product, Date, Name_Finished_Product, Name_Employee FROM dbo.Sale</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Sales_of_product" DataSetColumn="ID_Sales_of_product" />
+              <Mapping SourceColumn="Quantity_Sales_of_product" DataSetColumn="Quantity_Sales_of_product" />
+              <Mapping SourceColumn="Amount_Sales_of_product" DataSetColumn="Amount_Sales_of_product" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Name_Finished_Product" DataSetColumn="Name_Finished_Product" />
               <Mapping SourceColumn="Name_Employee" DataSetColumn="Name_Employee" />
             </Mappings>
             <Sources />
@@ -742,6 +783,30 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductionDateTableAdapter" GeneratorDataComponentClassName="ProductionDateTableAdapter" Name="ProductionDate" UserDataComponentName="ProductionDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.ProductionDate" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ProductionDate</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@start" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@end" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Product_Manufacturing" DataSetColumn="ID_Product_Manufacturing" />
+              <Mapping SourceColumn="Name_Finished_Product" DataSetColumn="Name_Finished_Product" />
+              <Mapping SourceColumn="Quantity_Product_Manufacturing" DataSetColumn="Quantity_Product_Manufacturing" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Name_Employee" DataSetColumn="Name_Employee" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PurchaseDateTableAdapter" GeneratorDataComponentClassName="PurchaseDateTableAdapter" Name="PurchaseDate" UserDataComponentName="PurchaseDateTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.PurchaseDate" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -787,6 +852,31 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
               <Mapping SourceColumn="Name_Raw_material" DataSetColumn="Name_Raw_material" />
               <Mapping SourceColumn="Quantity_Purchase_Raw_Material" DataSetColumn="Quantity_Purchase_Raw_Material" />
               <Mapping SourceColumn="Amount__Purchase_Raw_Material" DataSetColumn="Amount__Purchase_Raw_Material" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Name_Employee" DataSetColumn="Name_Employee" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SalesDateTableAdapter" GeneratorDataComponentClassName="SalesDateTableAdapter" Name="SalesDate" UserDataComponentName="SalesDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.SalesDate" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SalesDate</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@start" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@end" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Sales_of_product" DataSetColumn="ID_Sales_of_product" />
+              <Mapping SourceColumn="Name_Finished_Product" DataSetColumn="Name_Finished_Product" />
+              <Mapping SourceColumn="Quantity_Sales_of_product" DataSetColumn="Quantity_Sales_of_product" />
+              <Mapping SourceColumn="Amount_Sales_of_product" DataSetColumn="Amount_Sales_of_product" />
               <Mapping SourceColumn="Date" DataSetColumn="Date" />
               <Mapping SourceColumn="Name_Employee" DataSetColumn="Name_Employee" />
             </Mappings>
@@ -984,6 +1074,29 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Production" msprop:Generator_RowEvHandlerName="ProductionRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductionRowDeleted" msprop:Generator_RowDeletingName="ProductionRowDeleting" msprop:Generator_RowEvArgName="ProductionRowChangeEvent" msprop:Generator_TablePropName="Production" msprop:Generator_RowChangedName="ProductionRowChanged" msprop:Generator_RowChangingName="ProductionRowChanging" msprop:Generator_TableClassName="ProductionDataTable" msprop:Generator_RowClassName="ProductionRow" msprop:Generator_TableVarName="tableProduction" msprop:Generator_UserTableName="Production">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Product_Manufacturing" msprop:Generator_ColumnPropNameInRow="ID_Product_Manufacturing" msprop:Generator_ColumnPropNameInTable="ID_Product_ManufacturingColumn" msprop:Generator_ColumnVarNameInTable="columnID_Product_Manufacturing" msprop:Generator_UserColumnName="ID_Product_Manufacturing" type="xs:int" />
+              <xs:element name="Quantity_Product_Manufacturing" msprop:Generator_ColumnPropNameInRow="Quantity_Product_Manufacturing" msprop:Generator_ColumnPropNameInTable="Quantity_Product_ManufacturingColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity_Product_Manufacturing" msprop:Generator_UserColumnName="Quantity_Product_Manufacturing" type="xs:double" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Name_Finished_Product" msprop:Generator_ColumnPropNameInRow="Name_Finished_Product" msprop:Generator_ColumnPropNameInTable="Name_Finished_ProductColumn" msprop:Generator_ColumnVarNameInTable="columnName_Finished_Product" msprop:Generator_UserColumnName="Name_Finished_Product" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_Employee" msprop:Generator_ColumnPropNameInRow="Name_Employee" msprop:Generator_ColumnPropNameInTable="Name_EmployeeColumn" msprop:Generator_ColumnVarNameInTable="columnName_Employee" msprop:Generator_UserColumnName="Name_Employee" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="Purchase" msprop:Generator_RowEvHandlerName="PurchaseRowChangeEventHandler" msprop:Generator_RowDeletedName="PurchaseRowDeleted" msprop:Generator_RowDeletingName="PurchaseRowDeleting" msprop:Generator_RowEvArgName="PurchaseRowChangeEvent" msprop:Generator_TablePropName="Purchase" msprop:Generator_RowChangedName="PurchaseRowChanged" msprop:Generator_RowChangingName="PurchaseRowChanging" msprop:Generator_TableClassName="PurchaseDataTable" msprop:Generator_RowClassName="PurchaseRow" msprop:Generator_TableVarName="tablePurchase" msprop:Generator_UserTableName="Purchase">
           <xs:complexType>
             <xs:sequence>
@@ -992,6 +1105,30 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
               <xs:element name="Amount__Purchase_Raw_Material" msprop:Generator_ColumnPropNameInRow="Amount__Purchase_Raw_Material" msprop:Generator_ColumnPropNameInTable="Amount__Purchase_Raw_MaterialColumn" msprop:Generator_ColumnVarNameInTable="columnAmount__Purchase_Raw_Material" msprop:Generator_UserColumnName="Amount__Purchase_Raw_Material" type="xs:double" minOccurs="0" />
               <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Name_Raw_material" msprop:Generator_ColumnPropNameInRow="Name_Raw_material" msprop:Generator_ColumnPropNameInTable="Name_Raw_materialColumn" msprop:Generator_ColumnVarNameInTable="columnName_Raw_material" msprop:Generator_UserColumnName="Name_Raw_material" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_Employee" msprop:Generator_ColumnPropNameInRow="Name_Employee" msprop:Generator_ColumnPropNameInTable="Name_EmployeeColumn" msprop:Generator_ColumnVarNameInTable="columnName_Employee" msprop:Generator_UserColumnName="Name_Employee" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sale" msprop:Generator_RowEvHandlerName="SaleRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleRowDeleted" msprop:Generator_RowDeletingName="SaleRowDeleting" msprop:Generator_RowEvArgName="SaleRowChangeEvent" msprop:Generator_TablePropName="Sale" msprop:Generator_RowChangedName="SaleRowChanged" msprop:Generator_RowChangingName="SaleRowChanging" msprop:Generator_TableClassName="SaleDataTable" msprop:Generator_RowClassName="SaleRow" msprop:Generator_TableVarName="tableSale" msprop:Generator_UserTableName="Sale">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Sales_of_product" msprop:Generator_ColumnPropNameInRow="ID_Sales_of_product" msprop:Generator_ColumnPropNameInTable="ID_Sales_of_productColumn" msprop:Generator_ColumnVarNameInTable="columnID_Sales_of_product" msprop:Generator_UserColumnName="ID_Sales_of_product" type="xs:int" />
+              <xs:element name="Quantity_Sales_of_product" msprop:Generator_ColumnPropNameInRow="Quantity_Sales_of_product" msprop:Generator_ColumnPropNameInTable="Quantity_Sales_of_productColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity_Sales_of_product" msprop:Generator_UserColumnName="Quantity_Sales_of_product" type="xs:double" minOccurs="0" />
+              <xs:element name="Amount_Sales_of_product" msprop:Generator_ColumnPropNameInRow="Amount_Sales_of_product" msprop:Generator_ColumnPropNameInTable="Amount_Sales_of_productColumn" msprop:Generator_ColumnVarNameInTable="columnAmount_Sales_of_product" msprop:Generator_UserColumnName="Amount_Sales_of_product" type="xs:double" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Name_Finished_Product" msprop:Generator_ColumnPropNameInRow="Name_Finished_Product" msprop:Generator_ColumnPropNameInTable="Name_Finished_ProductColumn" msprop:Generator_ColumnVarNameInTable="columnName_Finished_Product" msprop:Generator_UserColumnName="Name_Finished_Product" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -1053,6 +1190,29 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ProductionDate" msprop:Generator_RowEvHandlerName="ProductionDateRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductionDateRowDeleted" msprop:Generator_RowDeletingName="ProductionDateRowDeleting" msprop:Generator_RowEvArgName="ProductionDateRowChangeEvent" msprop:Generator_TablePropName="ProductionDate" msprop:Generator_RowChangedName="ProductionDateRowChanged" msprop:Generator_RowChangingName="ProductionDateRowChanging" msprop:Generator_TableClassName="ProductionDateDataTable" msprop:Generator_RowClassName="ProductionDateRow" msprop:Generator_TableVarName="tableProductionDate" msprop:Generator_UserTableName="ProductionDate">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Product_Manufacturing" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="ID_Product_Manufacturing" msprop:Generator_ColumnPropNameInTable="ID_Product_ManufacturingColumn" msprop:Generator_ColumnVarNameInTable="columnID_Product_Manufacturing" msprop:Generator_UserColumnName="ID_Product_Manufacturing" type="xs:int" />
+              <xs:element name="Name_Finished_Product" msprop:Generator_ColumnPropNameInRow="Name_Finished_Product" msprop:Generator_ColumnPropNameInTable="Name_Finished_ProductColumn" msprop:Generator_ColumnVarNameInTable="columnName_Finished_Product" msprop:Generator_UserColumnName="Name_Finished_Product" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity_Product_Manufacturing" msprop:Generator_ColumnPropNameInRow="Quantity_Product_Manufacturing" msprop:Generator_ColumnPropNameInTable="Quantity_Product_ManufacturingColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity_Product_Manufacturing" msprop:Generator_UserColumnName="Quantity_Product_Manufacturing" type="xs:double" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Name_Employee" msprop:Generator_ColumnPropNameInRow="Name_Employee" msprop:Generator_ColumnPropNameInTable="Name_EmployeeColumn" msprop:Generator_ColumnVarNameInTable="columnName_Employee" msprop:Generator_UserColumnName="Name_Employee" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="PurchaseDate" msprop:Generator_RowEvHandlerName="PurchaseDateRowChangeEventHandler" msprop:Generator_RowDeletedName="PurchaseDateRowDeleted" msprop:Generator_RowDeletingName="PurchaseDateRowDeleting" msprop:Generator_RowEvArgName="PurchaseDateRowChangeEvent" msprop:Generator_TablePropName="PurchaseDate" msprop:Generator_RowChangedName="PurchaseDateRowChanged" msprop:Generator_RowChangingName="PurchaseDateRowChanging" msprop:Generator_TableClassName="PurchaseDateDataTable" msprop:Generator_RowClassName="PurchaseDateRow" msprop:Generator_TableVarName="tablePurchaseDate" msprop:Generator_UserTableName="PurchaseDate">
           <xs:complexType>
             <xs:sequence>
@@ -1090,6 +1250,30 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
               </xs:element>
               <xs:element name="Quantity_Purchase_Raw_Material" msprop:Generator_ColumnPropNameInRow="Quantity_Purchase_Raw_Material" msprop:Generator_ColumnPropNameInTable="Quantity_Purchase_Raw_MaterialColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity_Purchase_Raw_Material" msprop:Generator_UserColumnName="Quantity_Purchase_Raw_Material" type="xs:double" minOccurs="0" />
               <xs:element name="Amount__Purchase_Raw_Material" msprop:Generator_ColumnPropNameInRow="Amount__Purchase_Raw_Material" msprop:Generator_ColumnPropNameInTable="Amount__Purchase_Raw_MaterialColumn" msprop:Generator_ColumnVarNameInTable="columnAmount__Purchase_Raw_Material" msprop:Generator_UserColumnName="Amount__Purchase_Raw_Material" type="xs:double" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Name_Employee" msprop:Generator_ColumnPropNameInRow="Name_Employee" msprop:Generator_ColumnPropNameInTable="Name_EmployeeColumn" msprop:Generator_ColumnVarNameInTable="columnName_Employee" msprop:Generator_UserColumnName="Name_Employee" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SalesDate" msprop:Generator_RowEvHandlerName="SalesDateRowChangeEventHandler" msprop:Generator_RowDeletedName="SalesDateRowDeleted" msprop:Generator_RowDeletingName="SalesDateRowDeleting" msprop:Generator_RowEvArgName="SalesDateRowChangeEvent" msprop:Generator_TablePropName="SalesDate" msprop:Generator_RowChangedName="SalesDateRowChanged" msprop:Generator_RowChangingName="SalesDateRowChanging" msprop:Generator_TableClassName="SalesDateDataTable" msprop:Generator_RowClassName="SalesDateRow" msprop:Generator_TableVarName="tableSalesDate" msprop:Generator_UserTableName="SalesDate">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Sales_of_product" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="ID_Sales_of_product" msprop:Generator_ColumnPropNameInTable="ID_Sales_of_productColumn" msprop:Generator_ColumnVarNameInTable="columnID_Sales_of_product" msprop:Generator_UserColumnName="ID_Sales_of_product" type="xs:int" />
+              <xs:element name="Name_Finished_Product" msprop:Generator_ColumnPropNameInRow="Name_Finished_Product" msprop:Generator_ColumnPropNameInTable="Name_Finished_ProductColumn" msprop:Generator_ColumnVarNameInTable="columnName_Finished_Product" msprop:Generator_UserColumnName="Name_Finished_Product" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity_Sales_of_product" msprop:Generator_ColumnPropNameInRow="Quantity_Sales_of_product" msprop:Generator_ColumnPropNameInTable="Quantity_Sales_of_productColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity_Sales_of_product" msprop:Generator_UserColumnName="Quantity_Sales_of_product" type="xs:double" minOccurs="0" />
+              <xs:element name="Amount_Sales_of_product" msprop:Generator_ColumnPropNameInRow="Amount_Sales_of_product" msprop:Generator_ColumnPropNameInTable="Amount_Sales_of_productColumn" msprop:Generator_ColumnVarNameInTable="columnAmount_Sales_of_product" msprop:Generator_UserColumnName="Amount_Sales_of_product" type="xs:double" minOccurs="0" />
               <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Name_Employee" msprop:Generator_ColumnPropNameInRow="Name_Employee" msprop:Generator_ColumnPropNameInTable="Name_EmployeeColumn" msprop:Generator_ColumnVarNameInTable="columnName_Employee" msprop:Generator_UserColumnName="Name_Employee" minOccurs="0">
                 <xs:simpleType>
@@ -1143,9 +1327,17 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
       <xs:selector xpath=".//mstns:UnitOfMeasurements" />
       <xs:field xpath="mstns:ID_UnitOfMeasurement" />
     </xs:unique>
+    <xs:unique name="Production_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Production" />
+      <xs:field xpath="mstns:ID_Product_Manufacturing" />
+    </xs:unique>
     <xs:unique name="Purchase_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Purchase" />
       <xs:field xpath="mstns:ID_Purchase_Raw_Material" />
+    </xs:unique>
+    <xs:unique name="Sale_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Sale" />
+      <xs:field xpath="mstns:ID_Sales_of_product" />
     </xs:unique>
     <xs:unique name="GetIngredientsForProduct_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:GetIngredientsForProduct" />
@@ -1159,6 +1351,10 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
       <xs:selector xpath=".//mstns:GetIngredientsForProductByName2" />
       <xs:field xpath="mstns:ID_Ingredient" />
     </xs:unique>
+    <xs:unique name="ProductionDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProductionDate" />
+      <xs:field xpath="mstns:ID_Product_Manufacturing" />
+    </xs:unique>
     <xs:unique name="PurchaseDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:PurchaseDate" />
       <xs:field xpath="mstns:ID_Purchase_Raw_Material" />
@@ -1166,6 +1362,10 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
     <xs:unique name="PurchaseDate2_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:PurchaseDate2" />
       <xs:field xpath="mstns:ID_Purchase_Raw_Material" />
+    </xs:unique>
+    <xs:unique name="SalesDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SalesDate" />
+      <xs:field xpath="mstns:ID_Sales_of_product" />
     </xs:unique>
   </xs:element>
   <xs:annotation>
