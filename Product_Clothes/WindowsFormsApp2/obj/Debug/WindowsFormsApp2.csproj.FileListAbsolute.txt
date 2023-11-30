@@ -86,3 +86,4 @@ C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3
 C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
 C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Purchase.resources
+C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.purchaseViewer.resources

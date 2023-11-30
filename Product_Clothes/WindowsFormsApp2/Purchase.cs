@@ -65,5 +65,11 @@ namespace WindowsFormsApp2
             purchaseDataGridView.Update();
             purchaseDataGridView.Refresh();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            purchaseViewer form = new purchaseViewer(dateTimePicker1, dateTimePicker2);
+            form.Show();
+        }
     }
 }

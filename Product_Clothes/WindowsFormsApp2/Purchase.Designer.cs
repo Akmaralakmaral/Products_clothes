@@ -93,6 +93,7 @@
             this.button1.TabIndex = 30;
             this.button1.Text = "Отчет";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker2
             // 
@@ -142,7 +143,7 @@
             this.purchaseDataGridView.DataSource = this.purchase_Raw_MaterialsBindingSource;
             this.purchaseDataGridView.Location = new System.Drawing.Point(12, 82);
             this.purchaseDataGridView.Name = "purchaseDataGridView";
-            this.purchaseDataGridView.Size = new System.Drawing.Size(885, 294);
+            this.purchaseDataGridView.Size = new System.Drawing.Size(885, 371);
             this.purchaseDataGridView.TabIndex = 34;
             // 
             // purchase_Raw_MaterialsTableAdapter
