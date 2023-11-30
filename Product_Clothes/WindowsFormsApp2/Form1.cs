@@ -61,7 +61,9 @@ namespace WindowsFormsApp2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Purchase_Raw_Material form = new Purchase_Raw_Material();
+            //Purchase_Raw_Material form = new Purchase_Raw_Material();
+            //form.Show();
+            Purchase form = new Purchase();
             form.Show();
         }
 

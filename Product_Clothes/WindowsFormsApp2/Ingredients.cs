@@ -104,5 +104,28 @@ namespace WindowsFormsApp2
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (IngredientsDataGridView.SelectedRows.Count > 0)
+            {
+                int index = IngredientsDataGridView.SelectedRows[0].Index;
+                int id = 0;
+                bool converted = Int32.TryParse(IngredientsDataGridView[0, index].Value.ToString(), out id);
+                if (converted == false)
+                    return;
+
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "IngredientDelete";
+                command.Parameters.AddWithValue("@id", id);
+                command.ExecuteNonQuery();
+                dB_accounting_material_financial_assetsDataSet.AcceptChanges();
+                connection.Close();
+                MessageBox.Show("Ингредиент был удален");
+            }
+        }
     }
 }

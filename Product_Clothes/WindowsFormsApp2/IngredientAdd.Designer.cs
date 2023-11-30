@@ -37,12 +37,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dB_accounting_material_financial_assetsDataSet = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSet();
             this.tableAdapterManager = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.TableAdapterManager();
-            this.finished_ProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finished_ProductsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Finished_ProductsTableAdapter();
+            this.raw_materialsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Raw_materialsTableAdapter();
+            this.finished_ProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finished_ProductsComboBox = new System.Windows.Forms.ComboBox();
             this.raw_materialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.raw_materialsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Raw_materialsTableAdapter();
             this.raw_materialsComboBox = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dB_accounting_material_financial_assetsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finished_ProductsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.raw_materialsBindingSource)).BeginInit();
@@ -100,7 +101,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(117, 152);
+            this.button1.Location = new System.Drawing.Point(25, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 46);
             this.button1.TabIndex = 23;
@@ -128,14 +129,18 @@
             this.tableAdapterManager.UnitOfMeasurementsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // finished_ProductsTableAdapter
+            // 
+            this.finished_ProductsTableAdapter.ClearBeforeFill = true;
+            // 
+            // raw_materialsTableAdapter
+            // 
+            this.raw_materialsTableAdapter.ClearBeforeFill = true;
+            // 
             // finished_ProductsBindingSource
             // 
             this.finished_ProductsBindingSource.DataMember = "Finished_Products";
             this.finished_ProductsBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
-            // 
-            // finished_ProductsTableAdapter
-            // 
-            this.finished_ProductsTableAdapter.ClearBeforeFill = true;
             // 
             // finished_ProductsComboBox
             // 
@@ -153,10 +158,6 @@
             this.raw_materialsBindingSource.DataMember = "Raw_materials";
             this.raw_materialsBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
             // 
-            // raw_materialsTableAdapter
-            // 
-            this.raw_materialsTableAdapter.ClearBeforeFill = true;
-            // 
             // raw_materialsComboBox
             // 
             this.raw_materialsComboBox.DataSource = this.raw_materialsBindingSource;
@@ -168,11 +169,22 @@
             this.raw_materialsComboBox.TabIndex = 24;
             this.raw_materialsComboBox.ValueMember = "ID_Raw_material";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(208, 150);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(109, 46);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "Закрыть";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // IngredientAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 208);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.raw_materialsComboBox);
             this.Controls.Add(this.finished_ProductsComboBox);
             this.Controls.Add(this.button1);
@@ -207,5 +219,6 @@
         private DB_accounting_material_financial_assetsDataSetTableAdapters.Raw_materialsTableAdapter raw_materialsTableAdapter;
         private System.Windows.Forms.BindingSource raw_materialsBindingSource;
         private System.Windows.Forms.ComboBox raw_materialsComboBox;
+        private System.Windows.Forms.Button button2;
     }
 }

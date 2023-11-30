@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DB_accounting_material_financial_assetsConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB_accounting_material_financial_assetsConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp2.Properties.Settings.GlobalReference.Default.DB_accounting_material_financial_assetsConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DB_accounting_material_financial_assetsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB_accounting_material_financial_assetsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp2.Properties.Settings.GlobalReference.Default.DB_accounting_material_financial_assetsConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BudgetTableAdapter" GeneratorDataComponentClassName="BudgetTableAdapter" Name="Budget" UserDataComponentName="BudgetTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Budget" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Budget" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Budget] WHERE (([ID_Budget] = @Original_ID_Budget) AND ((@IsNull_Budget_Amount = 1 AND [Budget_Amount] IS NULL) OR ([Budget_Amount] = @Original_Budget_Amount)))</CommandText>
@@ -58,7 +58,7 @@ SELECT ID_Budget, Budget_Amount FROM Budget WHERE (ID_Budget = @ID_Budget)</Comm
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Employee_PositionsTableAdapter" GeneratorDataComponentClassName="Employee_PositionsTableAdapter" Name="Employee_Positions" UserDataComponentName="Employee_PositionsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Employee_Positions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Employee_Positions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Employee_Positions] WHERE (([ID_Position_Employee] = @Original_ID_Position_Employee) AND ((@IsNull_Name_Position_Employee = 1 AND [Name_Position_Employee] IS NULL) OR ([Name_Position_Employee] = @Original_Name_Position_Employee)))</CommandText>
@@ -107,7 +107,7 @@ SELECT ID_Position_Employee, Name_Position_Employee FROM Employee_Positions WHER
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeesTableAdapter" GeneratorDataComponentClassName="EmployeesTableAdapter" Name="Employees" UserDataComponentName="EmployeesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Employees" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Employees" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Employees] WHERE (([ID_Employee] = @Original_ID_Employee) AND ((@IsNull_Name_Employee = 1 AND [Name_Employee] IS NULL) OR ([Name_Employee] = @Original_Name_Employee)) AND ((@IsNull_Position_Employee = 1 AND [Position_Employee] IS NULL) OR ([Position_Employee] = @Original_Position_Employee)) AND ((@IsNull_Salary_Employee = 1 AND [Salary_Employee] IS NULL) OR ([Salary_Employee] = @Original_Salary_Employee)) AND ((@IsNull_Address_Employee = 1 AND [Address_Employee] IS NULL) OR ([Address_Employee] = @Original_Address_Employee)) AND ((@IsNull_PhoneNumber_Employee = 1 AND [PhoneNumber_Employee] IS NULL) OR ([PhoneNumber_Employee] = @Original_PhoneNumber_Employee)))</CommandText>
@@ -184,7 +184,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Finished_ProductsTableAdapter" GeneratorDataComponentClassName="Finished_ProductsTableAdapter" Name="Finished_Products" UserDataComponentName="Finished_ProductsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Finished_Products" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Finished_Products" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Finished_Products] WHERE (([ID_Finished_Product] = @Original_ID_Finished_Product) AND ((@IsNull_Name_Finished_Product = 1 AND [Name_Finished_Product] IS NULL) OR ([Name_Finished_Product] = @Original_Name_Finished_Product)) AND ((@IsNull_UnitOfMeasurement = 1 AND [UnitOfMeasurement] IS NULL) OR ([UnitOfMeasurement] = @Original_UnitOfMeasurement)) AND ((@IsNull_Quantity_Finished_Product = 1 AND [Quantity_Finished_Product] IS NULL) OR ([Quantity_Finished_Product] = @Original_Quantity_Finished_Product)) AND ((@IsNull_Amount_Finished_Product = 1 AND [Amount_Finished_Product] IS NULL) OR ([Amount_Finished_Product] = @Original_Amount_Finished_Product)))</CommandText>
@@ -254,7 +254,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IngredientsTableAdapter" GeneratorDataComponentClassName="IngredientsTableAdapter" Name="Ingredients" UserDataComponentName="IngredientsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Ingredients" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Ingredients" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Ingredients] WHERE (([ID_Ingredient] = @Original_ID_Ingredient) AND ((@IsNull_Finished_Product = 1 AND [Finished_Product] IS NULL) OR ([Finished_Product] = @Original_Finished_Product)) AND ((@IsNull_Raw_material = 1 AND [Raw_material] IS NULL) OR ([Raw_material] = @Original_Raw_material)) AND ((@IsNull_Quantity_Ingredient = 1 AND [Quantity_Ingredient] IS NULL) OR ([Quantity_Ingredient] = @Original_Quantity_Ingredient)))</CommandText>
@@ -317,7 +317,7 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Product_ManufacturingsTableAdapter" GeneratorDataComponentClassName="Product_ManufacturingsTableAdapter" Name="Product_Manufacturings" UserDataComponentName="Product_ManufacturingsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Product_Manufacturings" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Product_Manufacturings" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Product_Manufacturings] WHERE (([ID_Product_Manufacturing] = @Original_ID_Product_Manufacturing) AND ((@IsNull_Product_Manufacturing = 1 AND [Product_Manufacturing] IS NULL) OR ([Product_Manufacturing] = @Original_Product_Manufacturing)) AND ((@IsNull_Quantity_Product_Manufacturing = 1 AND [Quantity_Product_Manufacturing] IS NULL) OR ([Quantity_Product_Manufacturing] = @Original_Quantity_Product_Manufacturing)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Employee = 1 AND [Employee] IS NULL) OR ([Employee] = @Original_Employee)))</CommandText>
@@ -387,7 +387,7 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Purchase_Raw_MaterialsTableAdapter" GeneratorDataComponentClassName="Purchase_Raw_MaterialsTableAdapter" Name="Purchase_Raw_Materials" UserDataComponentName="Purchase_Raw_MaterialsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Purchase_Raw_Materials" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Purchase_Raw_Materials" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Purchase_Raw_Materials] WHERE (([ID_Purchase_Raw_Material] = @Original_ID_Purchase_Raw_Material) AND ((@IsNull_Raw_Material = 1 AND [Raw_Material] IS NULL) OR ([Raw_Material] = @Original_Raw_Material)) AND ((@IsNull_Quantity_Purchase_Raw_Material = 1 AND [Quantity_Purchase_Raw_Material] IS NULL) OR ([Quantity_Purchase_Raw_Material] = @Original_Quantity_Purchase_Raw_Material)) AND ((@IsNull_Amount__Purchase_Raw_Material = 1 AND [Amount__Purchase_Raw_Material] IS NULL) OR ([Amount__Purchase_Raw_Material] = @Original_Amount__Purchase_Raw_Material)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Employee = 1 AND [Employee] IS NULL) OR ([Employee] = @Original_Employee)))</CommandText>
@@ -464,7 +464,7 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Raw_materialsTableAdapter" GeneratorDataComponentClassName="Raw_materialsTableAdapter" Name="Raw_materials" UserDataComponentName="Raw_materialsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Raw_materials" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Raw_materials" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Raw_materials] WHERE (([ID_Raw_material] = @Original_ID_Raw_material) AND ((@IsNull_Name_Raw_material = 1 AND [Name_Raw_material] IS NULL) OR ([Name_Raw_material] = @Original_Name_Raw_material)) AND ((@IsNull_UnitOfMeasurement = 1 AND [UnitOfMeasurement] IS NULL) OR ([UnitOfMeasurement] = @Original_UnitOfMeasurement)) AND ((@IsNull_Quantity_Raw_material = 1 AND [Quantity_Raw_material] IS NULL) OR ([Quantity_Raw_material] = @Original_Quantity_Raw_material)) AND ((@IsNull_Amount_Raw_material = 1 AND [Amount_Raw_material] IS NULL) OR ([Amount_Raw_material] = @Original_Amount_Raw_material)))</CommandText>
@@ -534,7 +534,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Sales_of_productsTableAdapter" GeneratorDataComponentClassName="Sales_of_productsTableAdapter" Name="Sales_of_products" UserDataComponentName="Sales_of_productsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Sales_of_products" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Sales_of_products" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Sales_of_products] WHERE (([ID_Sales_of_product] = @Original_ID_Sales_of_product) AND ((@IsNull_Product_Sales_of_product = 1 AND [Product_Sales_of_product] IS NULL) OR ([Product_Sales_of_product] = @Original_Product_Sales_of_product)) AND ((@IsNull_Quantity_Sales_of_product = 1 AND [Quantity_Sales_of_product] IS NULL) OR ([Quantity_Sales_of_product] = @Original_Quantity_Sales_of_product)) AND ((@IsNull_Amount_Sales_of_product = 1 AND [Amount_Sales_of_product] IS NULL) OR ([Amount_Sales_of_product] = @Original_Amount_Sales_of_product)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Employee = 1 AND [Employee] IS NULL) OR ([Employee] = @Original_Employee)))</CommandText>
@@ -611,7 +611,7 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UnitOfMeasurementsTableAdapter" GeneratorDataComponentClassName="UnitOfMeasurementsTableAdapter" Name="UnitOfMeasurements" UserDataComponentName="UnitOfMeasurementsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.UnitOfMeasurements" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.UnitOfMeasurements" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[UnitOfMeasurements] WHERE (([ID_UnitOfMeasurement] = @Original_ID_UnitOfMeasurement) AND ((@IsNull_Name_UnitOfMeasurement = 1 AND [Name_UnitOfMeasurement] IS NULL) OR ([Name_UnitOfMeasurement] = @Original_Name_UnitOfMeasurement)))</CommandText>
@@ -658,9 +658,30 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PurchaseTableAdapter" GeneratorDataComponentClassName="PurchaseTableAdapter" Name="Purchase" UserDataComponentName="PurchaseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.Purchase" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_Purchase_Raw_Material, Quantity_Purchase_Raw_Material, Amount__Purchase_Raw_Material, Date, Name_Raw_material, Name_Employee FROM dbo.Purchase</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Purchase_Raw_Material" DataSetColumn="ID_Purchase_Raw_Material" />
+              <Mapping SourceColumn="Quantity_Purchase_Raw_Material" DataSetColumn="Quantity_Purchase_Raw_Material" />
+              <Mapping SourceColumn="Amount__Purchase_Raw_Material" DataSetColumn="Amount__Purchase_Raw_Material" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Name_Raw_material" DataSetColumn="Name_Raw_material" />
+              <Mapping SourceColumn="Name_Employee" DataSetColumn="Name_Employee" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetIngredientsForProductTableAdapter" GeneratorDataComponentClassName="GetIngredientsForProductTableAdapter" Name="GetIngredientsForProduct" UserDataComponentName="GetIngredientsForProductTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.GetIngredientsForProduct" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.GetIngredientsForProduct" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetIngredientsForProduct</CommandText>
@@ -681,7 +702,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetIngredientsForProductByNameTableAdapter" GeneratorDataComponentClassName="GetIngredientsForProductByNameTableAdapter" Name="GetIngredientsForProductByName" UserDataComponentName="GetIngredientsForProductByNameTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.GetIngredientsForProductByName" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.GetIngredientsForProductByName" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetIngredientsForProductByName</CommandText>
@@ -702,7 +723,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetIngredientsForProductByName2TableAdapter" GeneratorDataComponentClassName="GetIngredientsForProductByName2TableAdapter" Name="GetIngredientsForProductByName2" UserDataComponentName="GetIngredientsForProductByName2TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.GetIngredientsForProductByName2" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.GetIngredientsForProductByName2" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetIngredientsForProductByName2</CommandText>
@@ -721,9 +742,34 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PurchaseDateTableAdapter" GeneratorDataComponentClassName="PurchaseDateTableAdapter" Name="PurchaseDate" UserDataComponentName="PurchaseDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.PurchaseDate" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.PurchaseDate</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@start" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@end" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Purchase_Raw_Material" DataSetColumn="ID_Purchase_Raw_Material" />
+              <Mapping SourceColumn="Name_Raw_material" DataSetColumn="Name_Raw_material" />
+              <Mapping SourceColumn="Quantity_Purchase_Raw_Material" DataSetColumn="Quantity_Purchase_Raw_Material" />
+              <Mapping SourceColumn="Amount__Purchase_Raw_Material" DataSetColumn="Amount__Purchase_Raw_Material" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Name_Employee" DataSetColumn="Name_Employee" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources>
-          <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.IngredientAdd" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="IngredientAdd" MethodsParameterType="CLR" Modifier="Public" Name="IngredientAdd" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="IngredientAdd">
+          <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.IngredientAdd" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="IngredientAdd" MethodsParameterType="CLR" Modifier="Public" Name="IngredientAdd" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="IngredientAdd">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.IngredientAdd</CommandText>
@@ -736,7 +782,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.IngredientDelete" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="IngredientDelete" MethodsParameterType="CLR" Modifier="Public" Name="IngredientDelete" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="IngredientDelete">
+          <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.IngredientDelete" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="IngredientDelete" MethodsParameterType="CLR" Modifier="Public" Name="IngredientDelete" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="IngredientDelete">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.IngredientDelete</CommandText>
@@ -747,7 +793,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString1 (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.IngredientUpdate" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="IngredientUpdate" MethodsParameterType="CLR" Modifier="Public" Name="IngredientUpdate" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="IngredientUpdate">
+          <DbSource ConnectionRef="DB_accounting_material_financial_assetsConnectionString (Settings)" DbObjectName="DB_accounting_material_financial_assets.dbo.IngredientUpdate" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="IngredientUpdate" MethodsParameterType="CLR" Modifier="Public" Name="IngredientUpdate" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="IngredientUpdate">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.IngredientUpdate</CommandText>
@@ -913,6 +959,30 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Purchase" msprop:Generator_RowEvHandlerName="PurchaseRowChangeEventHandler" msprop:Generator_RowDeletedName="PurchaseRowDeleted" msprop:Generator_RowDeletingName="PurchaseRowDeleting" msprop:Generator_RowEvArgName="PurchaseRowChangeEvent" msprop:Generator_TablePropName="Purchase" msprop:Generator_RowChangedName="PurchaseRowChanged" msprop:Generator_RowChangingName="PurchaseRowChanging" msprop:Generator_TableClassName="PurchaseDataTable" msprop:Generator_RowClassName="PurchaseRow" msprop:Generator_TableVarName="tablePurchase" msprop:Generator_UserTableName="Purchase">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Purchase_Raw_Material" msprop:Generator_ColumnPropNameInRow="ID_Purchase_Raw_Material" msprop:Generator_ColumnPropNameInTable="ID_Purchase_Raw_MaterialColumn" msprop:Generator_ColumnVarNameInTable="columnID_Purchase_Raw_Material" msprop:Generator_UserColumnName="ID_Purchase_Raw_Material" type="xs:int" />
+              <xs:element name="Quantity_Purchase_Raw_Material" msprop:Generator_ColumnPropNameInRow="Quantity_Purchase_Raw_Material" msprop:Generator_ColumnPropNameInTable="Quantity_Purchase_Raw_MaterialColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity_Purchase_Raw_Material" msprop:Generator_UserColumnName="Quantity_Purchase_Raw_Material" type="xs:double" minOccurs="0" />
+              <xs:element name="Amount__Purchase_Raw_Material" msprop:Generator_ColumnPropNameInRow="Amount__Purchase_Raw_Material" msprop:Generator_ColumnPropNameInTable="Amount__Purchase_Raw_MaterialColumn" msprop:Generator_ColumnVarNameInTable="columnAmount__Purchase_Raw_Material" msprop:Generator_UserColumnName="Amount__Purchase_Raw_Material" type="xs:double" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Name_Raw_material" msprop:Generator_ColumnPropNameInRow="Name_Raw_material" msprop:Generator_ColumnPropNameInTable="Name_Raw_materialColumn" msprop:Generator_ColumnVarNameInTable="columnName_Raw_material" msprop:Generator_UserColumnName="Name_Raw_material" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_Employee" msprop:Generator_ColumnPropNameInRow="Name_Employee" msprop:Generator_ColumnPropNameInTable="Name_EmployeeColumn" msprop:Generator_ColumnVarNameInTable="columnName_Employee" msprop:Generator_UserColumnName="Name_Employee" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="GetIngredientsForProduct" msprop:Generator_RowEvHandlerName="GetIngredientsForProductRowChangeEventHandler" msprop:Generator_RowDeletedName="GetIngredientsForProductRowDeleted" msprop:Generator_RowDeletingName="GetIngredientsForProductRowDeleting" msprop:Generator_RowEvArgName="GetIngredientsForProductRowChangeEvent" msprop:Generator_TablePropName="GetIngredientsForProduct" msprop:Generator_RowChangedName="GetIngredientsForProductRowChanged" msprop:Generator_RowChangingName="GetIngredientsForProductRowChanging" msprop:Generator_TableClassName="GetIngredientsForProductDataTable" msprop:Generator_RowClassName="GetIngredientsForProductRow" msprop:Generator_TableVarName="tableGetIngredientsForProduct" msprop:Generator_UserTableName="GetIngredientsForProduct">
           <xs:complexType>
             <xs:sequence>
@@ -958,6 +1028,30 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="PurchaseDate" msprop:Generator_RowEvHandlerName="PurchaseDateRowChangeEventHandler" msprop:Generator_RowDeletedName="PurchaseDateRowDeleted" msprop:Generator_RowDeletingName="PurchaseDateRowDeleting" msprop:Generator_RowEvArgName="PurchaseDateRowChangeEvent" msprop:Generator_TablePropName="PurchaseDate" msprop:Generator_RowChangedName="PurchaseDateRowChanged" msprop:Generator_RowChangingName="PurchaseDateRowChanging" msprop:Generator_TableClassName="PurchaseDateDataTable" msprop:Generator_RowClassName="PurchaseDateRow" msprop:Generator_TableVarName="tablePurchaseDate" msprop:Generator_UserTableName="PurchaseDate">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Purchase_Raw_Material" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="ID_Purchase_Raw_Material" msprop:Generator_ColumnPropNameInTable="ID_Purchase_Raw_MaterialColumn" msprop:Generator_ColumnVarNameInTable="columnID_Purchase_Raw_Material" msprop:Generator_UserColumnName="ID_Purchase_Raw_Material" type="xs:int" />
+              <xs:element name="Name_Raw_material" msprop:Generator_ColumnPropNameInRow="Name_Raw_material" msprop:Generator_ColumnPropNameInTable="Name_Raw_materialColumn" msprop:Generator_ColumnVarNameInTable="columnName_Raw_material" msprop:Generator_UserColumnName="Name_Raw_material" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity_Purchase_Raw_Material" msprop:Generator_ColumnPropNameInRow="Quantity_Purchase_Raw_Material" msprop:Generator_ColumnPropNameInTable="Quantity_Purchase_Raw_MaterialColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity_Purchase_Raw_Material" msprop:Generator_UserColumnName="Quantity_Purchase_Raw_Material" type="xs:double" minOccurs="0" />
+              <xs:element name="Amount__Purchase_Raw_Material" msprop:Generator_ColumnPropNameInRow="Amount__Purchase_Raw_Material" msprop:Generator_ColumnPropNameInTable="Amount__Purchase_Raw_MaterialColumn" msprop:Generator_ColumnVarNameInTable="columnAmount__Purchase_Raw_Material" msprop:Generator_UserColumnName="Amount__Purchase_Raw_Material" type="xs:double" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Name_Employee" msprop:Generator_ColumnPropNameInRow="Name_Employee" msprop:Generator_ColumnPropNameInTable="Name_EmployeeColumn" msprop:Generator_ColumnVarNameInTable="columnName_Employee" msprop:Generator_UserColumnName="Name_Employee" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1000,6 +1094,10 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
       <xs:selector xpath=".//mstns:UnitOfMeasurements" />
       <xs:field xpath="mstns:ID_UnitOfMeasurement" />
     </xs:unique>
+    <xs:unique name="Purchase_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Purchase" />
+      <xs:field xpath="mstns:ID_Purchase_Raw_Material" />
+    </xs:unique>
     <xs:unique name="GetIngredientsForProduct_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:GetIngredientsForProduct" />
       <xs:field xpath="mstns:ID_Ingredient" />
@@ -1011,6 +1109,10 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
     <xs:unique name="GetIngredientsForProductByName2_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:GetIngredientsForProductByName2" />
       <xs:field xpath="mstns:ID_Ingredient" />
+    </xs:unique>
+    <xs:unique name="PurchaseDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PurchaseDate" />
+      <xs:field xpath="mstns:ID_Purchase_Raw_Material" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

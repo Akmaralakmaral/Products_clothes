@@ -34,6 +34,10 @@ namespace WindowsFormsApp2
             dB_accounting_material_financial_assetsDataSet.AcceptChanges();
             connection.Close();
             MessageBox.Show("Новый ингредиент был добавлен");
+            this.Close();
+
+            Ingredients form = new Ingredients();
+            form.Show();
         }
 
         private void finished_ProductsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -72,6 +76,14 @@ namespace WindowsFormsApp2
             this.finished_ProductsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dB_accounting_material_financial_assetsDataSet);
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            Ingredients form = new Ingredients();
+            form.Show();
         }
     }
 }

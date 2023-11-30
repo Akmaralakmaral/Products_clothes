@@ -41,10 +41,20 @@ namespace WindowsFormsApp2
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "dB_accounting_material_financial_assetsDataSet.UnitOfMeasurements". При необходимости она может быть перемещена или удалена.
             this.unitOfMeasurementsTableAdapter.Fill(this.dB_accounting_material_financial_assetsDataSet.UnitOfMeasurements);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dB_accounting_material_financial_assetsDataSet.UnitOfMeasurements". При необходимости она может быть перемещена или удалена.
-            this.unitOfMeasurementsTableAdapter.Fill(this.dB_accounting_material_financial_assetsDataSet.UnitOfMeasurements);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "dB_accounting_material_financial_assetsDataSet.Finished_Products". При необходимости она может быть перемещена или удалена.
             this.finished_ProductsTableAdapter.Fill(this.dB_accounting_material_financial_assetsDataSet.Finished_Products);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dB_accounting_material_financial_assetsDataSet.UnitOfMeasurements". При необходимости она может быть перемещена или удалена.
+            this.finished_ProductsTableAdapter.Fill(this.dB_accounting_material_financial_assetsDataSet.Finished_Products);
+           // TODO: данная строка кода позволяет загрузить данные в таблицу "dB_accounting_material_financial_assetsDataSet.Finished_Products". При необходимости она может быть перемещена или удалена.
+            this.finished_ProductsTableAdapter.Fill(this.dB_accounting_material_financial_assetsDataSet.Finished_Products);
+
+        }
+
+        private void finished_ProductsBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.finished_ProductsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dB_accounting_material_financial_assetsDataSet);
 
         }
     }
