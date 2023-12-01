@@ -69,5 +69,11 @@ namespace WindowsFormsApp2
             saleDataGridView.Update();
             saleDataGridView.Refresh();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaleViewer form = new SaleViewer(dateTimePicker1, dateTimePicker2);
+            form.Show();
+        }
     }
 }

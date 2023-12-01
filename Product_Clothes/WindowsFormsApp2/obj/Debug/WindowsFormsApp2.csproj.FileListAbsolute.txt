@@ -90,3 +90,4 @@ C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3
 C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Production.resources
 C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Sale.resources
 C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ProductionViewer.resources
+C:\Users\Акмарал\Desktop\3 КУРС ОСЕННИЙ СЕМЕСТР\ППО3\Products_clothes\Product_Clothes\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SaleViewer.resources

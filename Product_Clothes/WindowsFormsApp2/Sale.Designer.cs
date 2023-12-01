@@ -37,14 +37,14 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dB_accounting_material_financial_assetsDataSet = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSet();
             this.saleDataGridView = new System.Windows.Forms.DataGridView();
-            this.salesofproductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sales_of_productsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Sales_of_productsTableAdapter();
             this.iDSalesofproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productSalesofproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantitySalesofproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountSalesofproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesofproductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sales_of_productsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Sales_of_productsTableAdapter();
             this.finished_ProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.finished_ProductsTableAdapter = new WindowsFormsApp2.DB_accounting_material_financial_assetsDataSetTableAdapters.Finished_ProductsTableAdapter();
             this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -92,6 +92,7 @@
             this.button1.TabIndex = 42;
             this.button1.Text = "Отчет";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker2
             // 
@@ -128,15 +129,6 @@
             this.saleDataGridView.Name = "saleDataGridView";
             this.saleDataGridView.Size = new System.Drawing.Size(810, 220);
             this.saleDataGridView.TabIndex = 46;
-            // 
-            // salesofproductsBindingSource
-            // 
-            this.salesofproductsBindingSource.DataMember = "Sales_of_products";
-            this.salesofproductsBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
-            // 
-            // sales_of_productsTableAdapter
-            // 
-            this.sales_of_productsTableAdapter.ClearBeforeFill = true;
             // 
             // iDSalesofproductDataGridViewTextBoxColumn
             // 
@@ -186,6 +178,15 @@
             this.employeeDataGridViewTextBoxColumn.HeaderText = "Employee";
             this.employeeDataGridViewTextBoxColumn.Name = "employeeDataGridViewTextBoxColumn";
             this.employeeDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // salesofproductsBindingSource
+            // 
+            this.salesofproductsBindingSource.DataMember = "Sales_of_products";
+            this.salesofproductsBindingSource.DataSource = this.dB_accounting_material_financial_assetsDataSet;
+            // 
+            // sales_of_productsTableAdapter
+            // 
+            this.sales_of_productsTableAdapter.ClearBeforeFill = true;
             // 
             // finished_ProductsBindingSource
             // 
