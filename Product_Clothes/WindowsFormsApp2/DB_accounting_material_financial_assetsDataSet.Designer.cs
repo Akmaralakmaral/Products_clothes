@@ -10944,7 +10944,7 @@ SELECT ID_Budget, Budget_Amount FROM Budget WHERE (ID_Budget = @ID_Budget)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11270,7 +11270,7 @@ SELECT ID_Position_Employee, Name_Position_Employee FROM Employee_Positions WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11620,7 +11620,7 @@ SELECT ID_Employee, Name_Employee, Position_Employee, Salary_Employee, Address_E
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12076,7 +12076,7 @@ SELECT ID_Finished_Product, Name_Finished_Product, UnitOfMeasurement, Quantity_F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12497,7 +12497,7 @@ SELECT ID_Ingredient, Finished_Product, Raw_material, Quantity_Ingredient FROM I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12897,7 +12897,7 @@ SELECT ID_Product_Manufacturing, Product_Manufacturing, Quantity_Product_Manufac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13332,7 +13332,7 @@ SELECT ID_Purchase_Raw_Material, Raw_Material, Quantity_Purchase_Raw_Material, A
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13788,7 +13788,7 @@ SELECT ID_Raw_material, Name_Raw_material, UnitOfMeasurement, Quantity_Raw_mater
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14223,7 +14223,7 @@ SELECT ID_Sales_of_product, Product_Sales_of_product, Quantity_Sales_of_product,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14662,7 +14662,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14964,7 +14964,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15137,7 +15137,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15310,7 +15310,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15480,7 +15480,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15663,7 +15663,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15846,7 +15846,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16031,7 +16031,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16230,7 +16230,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16429,7 +16429,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16628,7 +16628,7 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16720,9 +16720,9 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[3];
+            this._commandCollection = new global::System.Data.IDbCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1);
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.IngredientAdd";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16730,13 +16730,13 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@raw_materials", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.Real, 4, global::System.Data.ParameterDirection.Input, 24, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection(global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection(global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1);
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.IngredientDelete";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Connection = new global::System.Data.SqlClient.SqlConnection(global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Connection = new global::System.Data.SqlClient.SqlConnection(global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1);
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandText = "dbo.IngredientUpdate";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16744,6 +16744,22 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@finished_prod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@raw_materials", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.Real, 4, global::System.Data.ParameterDirection.Input, 24, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Connection = new global::System.Data.SqlClient.SqlConnection(global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandText = "dbo.Purchase_Insert";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@raw_material", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@amount", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@employee", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Connection = new global::System.Data.SqlClient.SqlConnection(global::WindowsFormsApp2.Properties.Settings.Default.DB_accounting_material_financial_assetsConnectionString1);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).CommandText = "dbo.SP_Zakupka";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sum", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16842,6 +16858,86 @@ SELECT ID_UnitOfMeasurement, Name_UnitOfMeasurement FROM UnitOfMeasurements WHER
             }
             else {
                 command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Purchase_Insert(global::System.Nullable<int> raw_material, global::System.Nullable<double> quantity, global::System.Nullable<double> amount, global::System.Nullable<global::System.DateTime> date, global::System.Nullable<int> employee) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[3]));
+            if ((raw_material.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(raw_material.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((quantity.HasValue == true)) {
+                command.Parameters[2].Value = ((double)(quantity.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((amount.HasValue == true)) {
+                command.Parameters[3].Value = ((double)(amount.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((date.HasValue == true)) {
+                command.Parameters[4].Value = ((System.DateTime)(date.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((employee.HasValue == true)) {
+                command.Parameters[5].Value = ((int)(employee.Value));
+            }
+            else {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int SP_Zakupka(global::System.Nullable<double> sum) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[4]));
+            if ((sum.HasValue == true)) {
+                command.Parameters[1].Value = ((double)(sum.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

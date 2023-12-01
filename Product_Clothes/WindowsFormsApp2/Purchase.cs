@@ -72,6 +72,10 @@ namespace WindowsFormsApp2
             form.Show();
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PurchaseAdd form = new PurchaseAdd();
+            form.Show();
+        }
     }
 }

@@ -145,17 +145,17 @@
     <Compile Include="Purchase.Designer.cs">
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="PurchaseAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseAdd.Designer.cs">
+      <DependentUpon>PurchaseAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="purchaseViewer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="purchaseViewer.Designer.cs">
       <DependentUpon>purchaseViewer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Purchase_Raw_Material.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchase_Raw_Material.Designer.cs">
-      <DependentUpon>Purchase_Raw_Material.cs</DependentUpon>
     </Compile>
     <Compile Include="Raw_Material.cs">
       <SubType>Form</SubType>
@@ -230,11 +230,11 @@
     <EmbeddedResource Include="Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseAdd.resx">
+      <DependentUpon>PurchaseAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="purchaseViewer.resx">
       <DependentUpon>purchaseViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Purchase_Raw_Material.resx">
-      <DependentUpon>Purchase_Raw_Material.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Raw_Material.resx">
       <DependentUpon>Raw_Material.cs</DependentUpon>
